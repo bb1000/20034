@@ -397,6 +397,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pathlib-module">pathlib module</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-module">csv module</a></li>
 </ul>
             </nav>
         </div>
@@ -2720,7 +2721,249 @@ Goodbye
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#compare mean salaries for different genders</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_lines</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">datafile</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">gender_data</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># {&#39;gender&#39;: [salaries..]}</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">all_lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="c1"># fields are values of single row/line</span>
+    <span class="n">gender</span> <span class="o">=</span> <span class="n">fields</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+    <span class="n">salary</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">fields</span><span class="p">[</span><span class="mi">7</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">gender</span> <span class="ow">in</span> <span class="n">gender_data</span><span class="p">:</span> <span class="c1"># is gender present as a key in the dictionary gender_data?</span>
+        <span class="n">gender_data</span><span class="p">[</span><span class="n">gender</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">gender_data</span><span class="p">[</span><span class="n">gender</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">salary</span><span class="p">]</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_data</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;Male&#39;, &#39;Genderfluid&#39;, &#39;Female&#39;, &#39;Genderqueer&#39;, &#39;Non-binary&#39;, &#39;Bigender&#39;, &#39;Polygender&#39;, &#39;Agender&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">gender</span><span class="p">,</span> <span class="n">salaries</span> <span class="ow">in</span> <span class="n">gender_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">salaries</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">salaries</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">gender</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">salaries</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Male 84138 444
+Genderfluid 95577 17
+Female 86417 448
+Genderqueer 86913 24
+Non-binary 86858 17
+Bigender 87399 20
+Polygender 77018 18
+Agender 96232 12
+</pre></div>
+</div>
+</div>
+</div>
 </section>
+</section>
+<section id="csv-module">
+<h2>csv module<a class="headerlink" href="#csv-module" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#dir(csv)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">datafile</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;id&#39;, &#39;first_name&#39;, &#39;last_name&#39;, &#39;email&#39;, &#39;gender&#39;, &#39;ip_address&#39;, &#39;employee_id&#39;, &#39;salary&#39;, &#39;department&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>csv.reader<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Docstring:</span>
+csv_reader = reader(iterable [, dialect=&#39;excel&#39;]
+                        [optional keyword args])
+    for row in csv_reader:
+        process(row)
+
+The &quot;iterable&quot; argument can be any object that returns a line
+of input for each iteration, such as a file object or a list.  The
+optional &quot;dialect&quot; parameter is discussed below.  The function
+also accepts optional keyword arguments which override settings
+provided by the dialect.
+
+The returned object is an iterator.  Each iteration returns a row
+of the CSV file (which can span multiple input lines).
+<span class=" -Color -Color-Red">Type:</span>      builtin_function_or_method
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_lines</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">datafile</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_lines</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;1&#39;,
+  &#39;Lucius&#39;,
+  &#39;Feehery&#39;,
+  &#39;lfeehery0@wiley.com&#39;,
+  &#39;Male&#39;,
+  &#39;155.143.110.178&#39;,
+  &#39;1&#39;,
+  &#39;123759&#39;,
+  &#39;Legal&#39;],
+ [&#39;2&#39;,
+  &#39;Melina&#39;,
+  &#39;Jossel&#39;,
+  &#39;mjossel1@slideshare.net&#39;,
+  &#39;Genderfluid&#39;,
+  &#39;238.182.167.147&#39;,
+  &#39;2&#39;,
+  &#39;91045&#39;,
+  &#39;Support&#39;],
+ [&#39;3&#39;,
+  &#39;Davide&#39;,
+  &#39;Allin&#39;,
+  &#39;dallin2@com.com&#39;,
+  &#39;Male&#39;,
+  &#39;151.26.69.126&#39;,
+  &#39;3&#39;,
+  &#39;66863&#39;,
+  &#39;Accounting&#39;],
+ [&#39;4&#39;,
+  &#39;Angeline&#39;,
+  &#39;Got&#39;,
+  &#39;agot3@amazon.com&#39;,
+  &#39;Female&#39;,
+  &#39;225.181.149.174&#39;,
+  &#39;4&#39;,
+  &#39;45217&#39;,
+  &#39;Human Resources&#39;]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>csv.DictReader<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Init signature:</span>
+csv.DictReader(
+    f,
+    fieldnames=<span class=" -Color -Color-Bold -Color-Bold-C28">None</span>,
+    restkey=<span class=" -Color -Color-Bold -Color-Bold-C28">None</span>,
+    restval=<span class=" -Color -Color-Bold -Color-Bold-C28">None</span>,
+    dialect=<span class=" -Color -Color-Yellow">&#39;excel&#39;</span>,
+    *args,
+    **kwds,
+)
+<span class=" -Color -Color-Red">Docstring:</span>      &lt;no docstring&gt;
+<span class=" -Color -Color-Red">File:</span>           ~/miniconda3/envs/bb1000/lib/python3.13/csv.py
+<span class=" -Color -Color-Red">Type:</span>           type
+<span class=" -Color -Color-Red">Subclasses:</span>     
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span> <span class="c1"># line will be a dictionary with header values as keys</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;id&#39;: &#39;1&#39;, &#39;first_name&#39;: &#39;Lucius&#39;, &#39;last_name&#39;: &#39;Feehery&#39;, &#39;email&#39;: &#39;lfeehery0@wiley.com&#39;, &#39;gender&#39;: &#39;Male&#39;, &#39;ip_address&#39;: &#39;155.143.110.178&#39;, &#39;employee_id&#39;: &#39;1&#39;, &#39;salary&#39;: &#39;123759&#39;, &#39;department&#39;: &#39;Legal&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gender_data</span> <span class="o">=</span> <span class="p">{}</span> <span class="c1"># {&#39;gender&#39;: [salaries..]}</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">datafile</span><span class="p">)):</span>
+    <span class="n">salary</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">])</span>
+    <span class="n">gender</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">gender</span> <span class="ow">in</span> <span class="n">gender_data</span><span class="p">:</span> <span class="c1"># is gender present as a key in the dictionary gender_data?</span>
+        <span class="n">gender_data</span><span class="p">[</span><span class="n">gender</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">gender_data</span><span class="p">[</span><span class="n">gender</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">salary</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">gender</span><span class="p">,</span> <span class="n">salaries</span> <span class="ow">in</span> <span class="n">gender_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">salaries</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">salaries</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">gender</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">salaries</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Male 84138 444
+Genderfluid 95577 17
+Female 86417 448
+Genderqueer 86913 24
+Non-binary 86858 17
+Bigender 87399 20
+Polygender 77018 18
+Agender 96232 12
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -2799,6 +3042,7 @@ Goodbye
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pathlib-module">pathlib module</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-module">csv module</a></li>
 </ul>
   </nav></div>
 
