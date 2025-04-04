@@ -3094,6 +3094,27 @@ passed to the dict constructor, including keyword arguments.
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">gender</span><span class="p">,</span> <span class="n">salaries</span> <span class="ow">in</span> <span class="n">gender_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">mean</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">salaries</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">salaries</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">gender</span><span class="p">,</span> <span class="n">mean</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">salaries</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Male 84138 444
+Genderfluid 95577 17
+Female 86417 448
+Genderqueer 86913 24
+Non-binary 86858 17
+Bigender 87399 20
+Polygender 77018 18
+Agender 96232 12
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
