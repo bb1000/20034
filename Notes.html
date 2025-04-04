@@ -2924,7 +2924,14 @@ csv.DictReader(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;id&#39;: &#39;1&#39;, &#39;first_name&#39;: &#39;Lucius&#39;, &#39;last_name&#39;: &#39;Feehery&#39;, &#39;email&#39;: &#39;lfeehery0@wiley.com&#39;, &#39;gender&#39;: &#39;Male&#39;, &#39;ip_address&#39;: &#39;155.143.110.178&#39;, &#39;employee_id&#39;: &#39;1&#39;, &#39;salary&#39;: &#39;123759&#39;, &#39;department&#39;: &#39;Legal&#39;}
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span> <span class="c1"># line will be a dictionary with header values as keys</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">break</span>
+
+<span class="ne">NameError</span>: name &#39;c&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -3066,6 +3073,23 @@ passed to the dict constructor, including keyword arguments.
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>defaultdict(int, {&#39;newkey&#39;: 0, &#39;anohter key&#39;: 0, &#39;another key&#39;: 1})
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># our previous example</span>
+<span class="c1">#gender_data = {} # {&#39;gender&#39;: [salaries..]}</span>
+<span class="n">gender_data</span> <span class="o">=</span> <span class="n">collections</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">datafile</span><span class="p">)):</span>
+    <span class="n">salary</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">line</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">])</span>
+    <span class="n">gender</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="s1">&#39;gender&#39;</span><span class="p">]</span>
+    <span class="c1">#if gender in gender_data: # is gender present as a key in the dictionary gender_data?</span>
+    <span class="c1">#    gender_data[gender].append(salary)</span>
+    <span class="c1">#else:</span>
+    <span class="c1">#    gender_data[gender] = [salary]</span>
+    <span class="n">gender_data</span><span class="p">[</span><span class="n">gender</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">salary</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
