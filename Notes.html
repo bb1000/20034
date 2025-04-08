@@ -4960,8 +4960,8 @@ Name: salary, dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get salaries for females, lowest first</span>
-<span class="n">personel</span><span class="p">[</span><span class="n">personel</span><span class="o">.</span><span class="n">gender</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get 10 lowest salaries for females, lowest first</span>
+<span class="n">personel</span><span class="p">[</span><span class="n">personel</span><span class="o">.</span><span class="n">gender</span> <span class="o">==</span> <span class="s1">&#39;Female&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;salary&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -4997,51 +4997,15 @@ Name: salary, dtype: int64
   </thead>
   <tbody>
     <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Angeline</td>
-      <td>Got</td>
-      <td>agot3@amazon.com</td>
+      <th>122</th>
+      <td>123</td>
+      <td>Nettie</td>
+      <td>Jandak</td>
+      <td>njandak3e@icq.com</td>
       <td>Female</td>
-      <td>225.181.149.174</td>
-      <td>4</td>
-      <td>45217</td>
-      <td>Human Resources</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>6</td>
-      <td>Jany</td>
-      <td>Shurman</td>
-      <td>jshurman5@columbia.edu</td>
-      <td>Female</td>
-      <td>184.137.133.73</td>
-      <td>6</td>
-      <td>91131</td>
-      <td>Support</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>Kirstin</td>
-      <td>Siveyer</td>
-      <td>ksiveyer6@independent.co.uk</td>
-      <td>Female</td>
-      <td>108.87.102.143</td>
-      <td>7</td>
-      <td>95774</td>
-      <td>Business Development</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>8</td>
-      <td>Desdemona</td>
-      <td>Skakunas</td>
-      <td>dskakunas7@china.com.cn</td>
-      <td>Female</td>
-      <td>32.2.187.83</td>
-      <td>8</td>
-      <td>67291</td>
+      <td>166.251.166.227</td>
+      <td>123</td>
+      <td>20317</td>
       <td>Marketing</td>
     </tr>
     <tr>
@@ -5057,80 +5021,103 @@ Name: salary, dtype: int64
       <td>Marketing</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
+      <th>155</th>
+      <td>156</td>
+      <td>Cymbre</td>
+      <td>Balam</td>
+      <td>cbalam4b@spotify.com</td>
+      <td>Female</td>
+      <td>55.156.47.9</td>
+      <td>156</td>
+      <td>20942</td>
+      <td>Engineering</td>
     </tr>
     <tr>
-      <th>987</th>
-      <td>988</td>
-      <td>Diann</td>
-      <td>Gowlett</td>
-      <td>dgowlettrf@goo.ne.jp</td>
+      <th>339</th>
+      <td>340</td>
+      <td>Anna-maria</td>
+      <td>Dadge</td>
+      <td>adadge9f@skyrock.com</td>
       <td>Female</td>
-      <td>199.56.94.219</td>
-      <td>988</td>
-      <td>148645</td>
-      <td>Marketing</td>
+      <td>91.173.33.3</td>
+      <td>340</td>
+      <td>21654</td>
+      <td>Sales</td>
     </tr>
     <tr>
-      <th>988</th>
-      <td>989</td>
-      <td>Di</td>
-      <td>Adriano</td>
-      <td>dadrianorg@google.pl</td>
+      <th>106</th>
+      <td>107</td>
+      <td>Amye</td>
+      <td>Schofield</td>
+      <td>aschofield2y@globo.com</td>
       <td>Female</td>
-      <td>80.133.203.65</td>
-      <td>989</td>
-      <td>77495</td>
+      <td>35.209.149.103</td>
+      <td>107</td>
+      <td>21930</td>
+      <td>Services</td>
+    </tr>
+    <tr>
+      <th>583</th>
+      <td>584</td>
+      <td>Terri</td>
+      <td>Eat</td>
+      <td>teatg7@wsj.com</td>
+      <td>Female</td>
+      <td>49.14.126.170</td>
+      <td>584</td>
+      <td>23226</td>
       <td>Research and Development</td>
     </tr>
     <tr>
-      <th>991</th>
-      <td>992</td>
-      <td>Aarika</td>
-      <td>Ceely</td>
-      <td>aceelyrj@sourceforge.net</td>
+      <th>286</th>
+      <td>287</td>
+      <td>Lillis</td>
+      <td>Jude</td>
+      <td>ljude7y@reddit.com</td>
       <td>Female</td>
-      <td>137.204.131.165</td>
-      <td>992</td>
-      <td>137986</td>
-      <td>Marketing</td>
+      <td>119.211.41.215</td>
+      <td>287</td>
+      <td>23616</td>
+      <td>Engineering</td>
     </tr>
     <tr>
-      <th>993</th>
-      <td>994</td>
-      <td>Norma</td>
-      <td>Gaiter</td>
-      <td>ngaiterrl@mysql.com</td>
+      <th>145</th>
+      <td>146</td>
+      <td>Karna</td>
+      <td>Eyton</td>
+      <td>keyton41@tripadvisor.com</td>
       <td>Female</td>
-      <td>233.52.251.114</td>
-      <td>994</td>
-      <td>97002</td>
+      <td>41.142.223.103</td>
+      <td>146</td>
+      <td>23657</td>
       <td>Accounting</td>
     </tr>
     <tr>
-      <th>996</th>
-      <td>997</td>
-      <td>Ardisj</td>
-      <td>Berrick</td>
-      <td>aberrickro@baidu.com</td>
+      <th>19</th>
+      <td>20</td>
+      <td>Noell</td>
+      <td>Gadney</td>
+      <td>ngadneyj@blinklist.com</td>
       <td>Female</td>
-      <td>48.150.87.53</td>
-      <td>997</td>
-      <td>121887</td>
-      <td>Accounting</td>
+      <td>218.219.155.4</td>
+      <td>20</td>
+      <td>23794</td>
+      <td>Research and Development</td>
+    </tr>
+    <tr>
+      <th>191</th>
+      <td>192</td>
+      <td>Golda</td>
+      <td>Cogswell</td>
+      <td>gcogswell5b@jigsy.com</td>
+      <td>Female</td>
+      <td>141.109.221.182</td>
+      <td>192</td>
+      <td>24087</td>
+      <td>Support</td>
     </tr>
   </tbody>
 </table>
-<p>448 rows × 9 columns</p>
 </div></div></div>
 </div>
 </section>
