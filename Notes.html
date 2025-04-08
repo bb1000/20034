@@ -4488,6 +4488,112 @@ Name: capital, dtype: object
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># modify element</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">][</span><span class="s1">&#39;Belgium&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">11.4</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1493964/1863415940.py:2: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
+You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
+A typical example is when you are setting values in a column of a DataFrame, like:
+
+df[&quot;col&quot;][row_indexer] = value
+
+Use `df.loc[row_indexer, &quot;col&quot;] = values` instead, to perform the assignment in a single step and ensure this keeps updating the original `df`.
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+  df[&#39;population&#39;][&#39;Belgium&#39;] = 11.4
+/tmp/ipykernel_1493964/1863415940.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df[&#39;population&#39;][&#39;Belgium&#39;] = 11.4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;Belgium&#39;</span><span class="p">,</span> <span class="s1">&#39;population&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">11.4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>population</th>
+      <th>area</th>
+      <th>capital</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Belgium</th>
+      <td>11.4</td>
+      <td>30510</td>
+      <td>Brussels</td>
+    </tr>
+    <tr>
+      <th>France</th>
+      <td>64.3</td>
+      <td>671308</td>
+      <td>Paris</td>
+    </tr>
+    <tr>
+      <th>Germany</th>
+      <td>81.3</td>
+      <td>357050</td>
+      <td>Berlin</td>
+    </tr>
+    <tr>
+      <th>Netherlands</th>
+      <td>16.9</td>
+      <td>41526</td>
+      <td>Amsterdam</td>
+    </tr>
+    <tr>
+      <th>United Kingdom</th>
+      <td>64.9</td>
+      <td>244820</td>
+      <td>London</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </section>
 </section>
 </section>
