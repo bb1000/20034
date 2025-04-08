@@ -4890,462 +4890,160 @@ dtype: bool
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">personel</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#dir(personel)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">personel</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;T&#39;,
- &#39;_AXIS_LEN&#39;,
- &#39;_AXIS_ORDERS&#39;,
- &#39;_AXIS_TO_AXIS_NUMBER&#39;,
- &#39;_HANDLED_TYPES&#39;,
- &#39;__abs__&#39;,
- &#39;__add__&#39;,
- &#39;__and__&#39;,
- &#39;__annotations__&#39;,
- &#39;__array__&#39;,
- &#39;__array_priority__&#39;,
- &#39;__array_ufunc__&#39;,
- &#39;__arrow_c_stream__&#39;,
- &#39;__bool__&#39;,
- &#39;__class__&#39;,
- &#39;__contains__&#39;,
- &#39;__copy__&#39;,
- &#39;__dataframe__&#39;,
- &#39;__dataframe_consortium_standard__&#39;,
- &#39;__deepcopy__&#39;,
- &#39;__delattr__&#39;,
- &#39;__delitem__&#39;,
- &#39;__dict__&#39;,
- &#39;__dir__&#39;,
- &#39;__divmod__&#39;,
- &#39;__doc__&#39;,
- &#39;__eq__&#39;,
- &#39;__finalize__&#39;,
- &#39;__firstlineno__&#39;,
- &#39;__floordiv__&#39;,
- &#39;__format__&#39;,
- &#39;__ge__&#39;,
- &#39;__getattr__&#39;,
- &#39;__getattribute__&#39;,
- &#39;__getitem__&#39;,
- &#39;__getstate__&#39;,
- &#39;__gt__&#39;,
- &#39;__hash__&#39;,
- &#39;__iadd__&#39;,
- &#39;__iand__&#39;,
- &#39;__ifloordiv__&#39;,
- &#39;__imod__&#39;,
- &#39;__imul__&#39;,
- &#39;__init__&#39;,
- &#39;__init_subclass__&#39;,
- &#39;__invert__&#39;,
- &#39;__ior__&#39;,
- &#39;__ipow__&#39;,
- &#39;__isub__&#39;,
- &#39;__iter__&#39;,
- &#39;__itruediv__&#39;,
- &#39;__ixor__&#39;,
- &#39;__le__&#39;,
- &#39;__len__&#39;,
- &#39;__lt__&#39;,
- &#39;__matmul__&#39;,
- &#39;__mod__&#39;,
- &#39;__module__&#39;,
- &#39;__mul__&#39;,
- &#39;__ne__&#39;,
- &#39;__neg__&#39;,
- &#39;__new__&#39;,
- &#39;__nonzero__&#39;,
- &#39;__or__&#39;,
- &#39;__pandas_priority__&#39;,
- &#39;__pos__&#39;,
- &#39;__pow__&#39;,
- &#39;__radd__&#39;,
- &#39;__rand__&#39;,
- &#39;__rdivmod__&#39;,
- &#39;__reduce__&#39;,
- &#39;__reduce_ex__&#39;,
- &#39;__repr__&#39;,
- &#39;__rfloordiv__&#39;,
- &#39;__rmatmul__&#39;,
- &#39;__rmod__&#39;,
- &#39;__rmul__&#39;,
- &#39;__ror__&#39;,
- &#39;__round__&#39;,
- &#39;__rpow__&#39;,
- &#39;__rsub__&#39;,
- &#39;__rtruediv__&#39;,
- &#39;__rxor__&#39;,
- &#39;__setattr__&#39;,
- &#39;__setitem__&#39;,
- &#39;__setstate__&#39;,
- &#39;__sizeof__&#39;,
- &#39;__static_attributes__&#39;,
- &#39;__str__&#39;,
- &#39;__sub__&#39;,
- &#39;__subclasshook__&#39;,
- &#39;__truediv__&#39;,
- &#39;__weakref__&#39;,
- &#39;__xor__&#39;,
- &#39;_accessors&#39;,
- &#39;_accum_func&#39;,
- &#39;_agg_examples_doc&#39;,
- &#39;_agg_see_also_doc&#39;,
- &#39;_align_for_op&#39;,
- &#39;_align_frame&#39;,
- &#39;_align_series&#39;,
- &#39;_append&#39;,
- &#39;_arith_method&#39;,
- &#39;_arith_method_with_reindex&#39;,
- &#39;_as_manager&#39;,
- &#39;_attrs&#39;,
- &#39;_box_col_values&#39;,
- &#39;_can_fast_transpose&#39;,
- &#39;_check_inplace_and_allows_duplicate_labels&#39;,
- &#39;_check_is_chained_assignment_possible&#39;,
- &#39;_check_label_or_level_ambiguity&#39;,
- &#39;_check_setitem_copy&#39;,
- &#39;_clear_item_cache&#39;,
- &#39;_clip_with_one_bound&#39;,
- &#39;_clip_with_scalar&#39;,
- &#39;_cmp_method&#39;,
- &#39;_combine_frame&#39;,
- &#39;_consolidate&#39;,
- &#39;_consolidate_inplace&#39;,
- &#39;_construct_axes_dict&#39;,
- &#39;_construct_result&#39;,
- &#39;_constructor&#39;,
- &#39;_constructor_from_mgr&#39;,
- &#39;_constructor_sliced&#39;,
- &#39;_constructor_sliced_from_mgr&#39;,
- &#39;_create_data_for_split_and_tight_to_dict&#39;,
- &#39;_data&#39;,
- &#39;_deprecate_downcast&#39;,
- &#39;_dir_additions&#39;,
- &#39;_dir_deletions&#39;,
- &#39;_dispatch_frame_op&#39;,
- &#39;_drop_axis&#39;,
- &#39;_drop_labels_or_levels&#39;,
- &#39;_ensure_valid_index&#39;,
- &#39;_find_valid_index&#39;,
- &#39;_flags&#39;,
- &#39;_flex_arith_method&#39;,
- &#39;_flex_cmp_method&#39;,
- &#39;_from_arrays&#39;,
- &#39;_from_mgr&#39;,
- &#39;_get_agg_axis&#39;,
- &#39;_get_axis&#39;,
- &#39;_get_axis_name&#39;,
- &#39;_get_axis_number&#39;,
- &#39;_get_axis_resolvers&#39;,
- &#39;_get_block_manager_axis&#39;,
- &#39;_get_bool_data&#39;,
- &#39;_get_cleaned_column_resolvers&#39;,
- &#39;_get_column_array&#39;,
- &#39;_get_index_resolvers&#39;,
- &#39;_get_item_cache&#39;,
- &#39;_get_label_or_level_values&#39;,
- &#39;_get_numeric_data&#39;,
- &#39;_get_value&#39;,
- &#39;_get_values_for_csv&#39;,
- &#39;_getitem_bool_array&#39;,
- &#39;_getitem_multilevel&#39;,
- &#39;_getitem_nocopy&#39;,
- &#39;_getitem_slice&#39;,
- &#39;_gotitem&#39;,
- &#39;_hidden_attrs&#39;,
- &#39;_indexed_same&#39;,
- &#39;_info_axis&#39;,
- &#39;_info_axis_name&#39;,
- &#39;_info_axis_number&#39;,
- &#39;_info_repr&#39;,
- &#39;_init_mgr&#39;,
- &#39;_inplace_method&#39;,
- &#39;_internal_names&#39;,
- &#39;_internal_names_set&#39;,
- &#39;_is_copy&#39;,
- &#39;_is_homogeneous_type&#39;,
- &#39;_is_label_or_level_reference&#39;,
- &#39;_is_label_reference&#39;,
- &#39;_is_level_reference&#39;,
- &#39;_is_mixed_type&#39;,
- &#39;_is_view&#39;,
- &#39;_is_view_after_cow_rules&#39;,
- &#39;_iset_item&#39;,
- &#39;_iset_item_mgr&#39;,
- &#39;_iset_not_inplace&#39;,
- &#39;_item_cache&#39;,
- &#39;_iter_column_arrays&#39;,
- &#39;_ixs&#39;,
- &#39;_logical_func&#39;,
- &#39;_logical_method&#39;,
- &#39;_maybe_align_series_as_frame&#39;,
- &#39;_maybe_cache_changed&#39;,
- &#39;_maybe_update_cacher&#39;,
- &#39;_metadata&#39;,
- &#39;_mgr&#39;,
- &#39;_min_count_stat_function&#39;,
- &#39;_needs_reindex_multi&#39;,
- &#39;_pad_or_backfill&#39;,
- &#39;_protect_consolidate&#39;,
- &#39;_reduce&#39;,
- &#39;_reduce_axis1&#39;,
- &#39;_reindex_axes&#39;,
- &#39;_reindex_multi&#39;,
- &#39;_reindex_with_indexers&#39;,
- &#39;_rename&#39;,
- &#39;_replace_columnwise&#39;,
- &#39;_repr_data_resource_&#39;,
- &#39;_repr_fits_horizontal_&#39;,
- &#39;_repr_fits_vertical_&#39;,
- &#39;_repr_html_&#39;,
- &#39;_repr_latex_&#39;,
- &#39;_reset_cache&#39;,
- &#39;_reset_cacher&#39;,
- &#39;_sanitize_column&#39;,
- &#39;_series&#39;,
- &#39;_set_axis&#39;,
- &#39;_set_axis_name&#39;,
- &#39;_set_axis_nocheck&#39;,
- &#39;_set_is_copy&#39;,
- &#39;_set_item&#39;,
- &#39;_set_item_frame_value&#39;,
- &#39;_set_item_mgr&#39;,
- &#39;_set_value&#39;,
- &#39;_setitem_array&#39;,
- &#39;_setitem_frame&#39;,
- &#39;_setitem_slice&#39;,
- &#39;_shift_with_freq&#39;,
- &#39;_should_reindex_frame_op&#39;,
- &#39;_slice&#39;,
- &#39;_stat_function&#39;,
- &#39;_stat_function_ddof&#39;,
- &#39;_take_with_is_copy&#39;,
- &#39;_to_dict_of_blocks&#39;,
- &#39;_to_latex_via_styler&#39;,
- &#39;_typ&#39;,
- &#39;_update_inplace&#39;,
- &#39;_validate_dtype&#39;,
- &#39;_values&#39;,
- &#39;_where&#39;,
- &#39;abs&#39;,
- &#39;add&#39;,
- &#39;add_prefix&#39;,
- &#39;add_suffix&#39;,
- &#39;agg&#39;,
- &#39;aggregate&#39;,
- &#39;align&#39;,
- &#39;all&#39;,
- &#39;any&#39;,
- &#39;apply&#39;,
- &#39;applymap&#39;,
- &#39;asfreq&#39;,
- &#39;asof&#39;,
- &#39;assign&#39;,
- &#39;astype&#39;,
- &#39;at&#39;,
- &#39;at_time&#39;,
- &#39;attrs&#39;,
- &#39;axes&#39;,
- &#39;backfill&#39;,
- &#39;between_time&#39;,
- &#39;bfill&#39;,
- &#39;bool&#39;,
- &#39;boxplot&#39;,
- &#39;clip&#39;,
- &#39;columns&#39;,
- &#39;combine&#39;,
- &#39;combine_first&#39;,
- &#39;compare&#39;,
- &#39;convert_dtypes&#39;,
- &#39;copy&#39;,
- &#39;corr&#39;,
- &#39;corrwith&#39;,
- &#39;count&#39;,
- &#39;cov&#39;,
- &#39;cummax&#39;,
- &#39;cummin&#39;,
- &#39;cumprod&#39;,
- &#39;cumsum&#39;,
- &#39;department&#39;,
- &#39;describe&#39;,
- &#39;diff&#39;,
- &#39;div&#39;,
- &#39;divide&#39;,
- &#39;dot&#39;,
- &#39;drop&#39;,
- &#39;drop_duplicates&#39;,
- &#39;droplevel&#39;,
- &#39;dropna&#39;,
- &#39;dtypes&#39;,
- &#39;duplicated&#39;,
- &#39;email&#39;,
- &#39;employee_id&#39;,
- &#39;empty&#39;,
- &#39;eq&#39;,
- &#39;equals&#39;,
- &#39;eval&#39;,
- &#39;ewm&#39;,
- &#39;expanding&#39;,
- &#39;explode&#39;,
- &#39;ffill&#39;,
- &#39;fillna&#39;,
- &#39;filter&#39;,
- &#39;first&#39;,
- &#39;first_name&#39;,
- &#39;first_valid_index&#39;,
- &#39;flags&#39;,
- &#39;floordiv&#39;,
- &#39;from_dict&#39;,
- &#39;from_records&#39;,
- &#39;ge&#39;,
- &#39;gender&#39;,
- &#39;get&#39;,
- &#39;groupby&#39;,
- &#39;gt&#39;,
- &#39;head&#39;,
- &#39;hist&#39;,
- &#39;iat&#39;,
- &#39;id&#39;,
- &#39;idxmax&#39;,
- &#39;idxmin&#39;,
- &#39;iloc&#39;,
- &#39;index&#39;,
- &#39;infer_objects&#39;,
- &#39;info&#39;,
- &#39;insert&#39;,
- &#39;interpolate&#39;,
- &#39;ip_address&#39;,
- &#39;isetitem&#39;,
- &#39;isin&#39;,
- &#39;isna&#39;,
- &#39;isnull&#39;,
- &#39;items&#39;,
- &#39;iterrows&#39;,
- &#39;itertuples&#39;,
- &#39;join&#39;,
- &#39;keys&#39;,
- &#39;kurt&#39;,
- &#39;kurtosis&#39;,
- &#39;last&#39;,
- &#39;last_name&#39;,
- &#39;last_valid_index&#39;,
- &#39;le&#39;,
- &#39;loc&#39;,
- &#39;lt&#39;,
- &#39;map&#39;,
- &#39;mask&#39;,
- &#39;max&#39;,
- &#39;mean&#39;,
- &#39;median&#39;,
- &#39;melt&#39;,
- &#39;memory_usage&#39;,
- &#39;merge&#39;,
- &#39;min&#39;,
- &#39;mod&#39;,
- &#39;mode&#39;,
- &#39;mul&#39;,
- &#39;multiply&#39;,
- &#39;ndim&#39;,
- &#39;ne&#39;,
- &#39;nlargest&#39;,
- &#39;notna&#39;,
- &#39;notnull&#39;,
- &#39;nsmallest&#39;,
- &#39;nunique&#39;,
- &#39;pad&#39;,
- &#39;pct_change&#39;,
- &#39;pipe&#39;,
- &#39;pivot&#39;,
- &#39;pivot_table&#39;,
- &#39;plot&#39;,
- &#39;pop&#39;,
- &#39;pow&#39;,
- &#39;prod&#39;,
- &#39;product&#39;,
- &#39;quantile&#39;,
- &#39;query&#39;,
- &#39;radd&#39;,
- &#39;rank&#39;,
- &#39;rdiv&#39;,
- &#39;reindex&#39;,
- &#39;reindex_like&#39;,
- &#39;rename&#39;,
- &#39;rename_axis&#39;,
- &#39;reorder_levels&#39;,
- &#39;replace&#39;,
- &#39;resample&#39;,
- &#39;reset_index&#39;,
- &#39;rfloordiv&#39;,
- &#39;rmod&#39;,
- &#39;rmul&#39;,
- &#39;rolling&#39;,
- &#39;round&#39;,
- &#39;rpow&#39;,
- &#39;rsub&#39;,
- &#39;rtruediv&#39;,
- &#39;salary&#39;,
- &#39;sample&#39;,
- &#39;select_dtypes&#39;,
- &#39;sem&#39;,
- &#39;set_axis&#39;,
- &#39;set_flags&#39;,
- &#39;set_index&#39;,
- &#39;shape&#39;,
- &#39;shift&#39;,
- &#39;size&#39;,
- &#39;skew&#39;,
- &#39;sort_index&#39;,
- &#39;sort_values&#39;,
- &#39;squeeze&#39;,
- &#39;stack&#39;,
- &#39;std&#39;,
- &#39;style&#39;,
- &#39;sub&#39;,
- &#39;subtract&#39;,
- &#39;sum&#39;,
- &#39;swapaxes&#39;,
- &#39;swaplevel&#39;,
- &#39;tail&#39;,
- &#39;take&#39;,
- &#39;to_clipboard&#39;,
- &#39;to_csv&#39;,
- &#39;to_dict&#39;,
- &#39;to_excel&#39;,
- &#39;to_feather&#39;,
- &#39;to_gbq&#39;,
- &#39;to_hdf&#39;,
- &#39;to_html&#39;,
- &#39;to_json&#39;,
- &#39;to_latex&#39;,
- &#39;to_markdown&#39;,
- &#39;to_numpy&#39;,
- &#39;to_orc&#39;,
- &#39;to_parquet&#39;,
- &#39;to_period&#39;,
- &#39;to_pickle&#39;,
- &#39;to_records&#39;,
- &#39;to_sql&#39;,
- &#39;to_stata&#39;,
- &#39;to_string&#39;,
- &#39;to_timestamp&#39;,
- &#39;to_xarray&#39;,
- &#39;to_xml&#39;,
- &#39;transform&#39;,
- &#39;transpose&#39;,
- &#39;truediv&#39;,
- &#39;truncate&#39;,
- &#39;tz_convert&#39;,
- &#39;tz_localize&#39;,
- &#39;unstack&#39;,
- &#39;update&#39;,
- &#39;value_counts&#39;,
- &#39;values&#39;,
- &#39;var&#39;,
- &#39;where&#39;,
- &#39;xs&#39;]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/groupby/groupby.py:1942,</span> in <span class="ni">GroupBy._agg_py_fallback</span><span class="nt">(self, how, values, ndim, alt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1941</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1942</span>     <span class="n">res_values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_grouper</span><span class="o">.</span><span class="n">agg_series</span><span class="p">(</span><span class="n">ser</span><span class="p">,</span> <span class="n">alt</span><span class="p">,</span> <span class="n">preserve_dtype</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1943</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/groupby/ops.py:864,</span> in <span class="ni">BaseGrouper.agg_series</span><span class="nt">(self, obj, func, preserve_dtype)</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>     <span class="n">preserve_dtype</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="ne">--&gt; </span><span class="mi">864</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_aggregate_series_pure_python</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">866</span> <span class="n">npvalues</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">maybe_convert_objects</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">try_float</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/groupby/ops.py:885,</span> in <span class="ni">BaseGrouper._aggregate_series_pure_python</span><span class="nt">(self, obj, func)</span>
+<span class="g g-Whitespace">    </span><span class="mi">884</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">splitter</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">885</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">886</span>     <span class="n">res</span> <span class="o">=</span> <span class="n">extract_result</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/groupby/groupby.py:2454,</span> in <span class="ni">GroupBy.mean.&lt;locals&gt;.&lt;lambda&gt;</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2451</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">2452</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cython_agg_general</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2453</span>         <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
+<span class="ne">-&gt; </span><span class="mi">2454</span>         <span class="n">alt</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">Series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">2455</span>         <span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2456</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2457</span>     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;groupby&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/series.py:6549,</span> in <span class="ni">Series.mean</span><span class="nt">(self, axis, skipna, numeric_only, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6541</span> <span class="nd">@doc</span><span class="p">(</span><span class="n">make_doc</span><span class="p">(</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">6542</span> <span class="k">def</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">6543</span>     <span class="bp">self</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="mi">6547</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">6548</span> <span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">6549</span>     <span class="k">return</span> <span class="n">NDFrame</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="p">,</span> <span class="n">numeric_only</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/generic.py:12420,</span> in <span class="ni">NDFrame.mean</span><span class="nt">(self, axis, skipna, numeric_only, **kwargs)</span>
+<span class="g g-Whitespace">  </span><span class="mi">12413</span> <span class="k">def</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">12414</span>     <span class="bp">self</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">12415</span>     <span class="n">axis</span><span class="p">:</span> <span class="n">Axis</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>  <span class="mi">12418</span>     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">  </span><span class="mi">12419</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Series</span> <span class="o">|</span> <span class="nb">float</span><span class="p">:</span>
+<span class="ne">&gt; </span><span class="mi">12420</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_stat_function</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">12421</span>         <span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="n">nanops</span><span class="o">.</span><span class="n">nanmean</span><span class="p">,</span> <span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="p">,</span> <span class="n">numeric_only</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="g g-Whitespace">  </span><span class="mi">12422</span>     <span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/generic.py:12377,</span> in <span class="ni">NDFrame._stat_function</span><span class="nt">(self, name, func, axis, skipna, numeric_only, **kwargs)</span>
+<span class="g g-Whitespace">  </span><span class="mi">12375</span> <span class="n">validate_bool_kwarg</span><span class="p">(</span><span class="n">skipna</span><span class="p">,</span> <span class="s2">&quot;skipna&quot;</span><span class="p">,</span> <span class="n">none_allowed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="ne">&gt; </span><span class="mi">12377</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reduce</span><span class="p">(</span>
+<span class="g g-Whitespace">  </span><span class="mi">12378</span>     <span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span>
+<span class="g g-Whitespace">  </span><span class="mi">12379</span> <span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/series.py:6457,</span> in <span class="ni">Series._reduce</span><span class="nt">(self, op, name, axis, skipna, numeric_only, filter_type, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6453</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">6454</span>         <span class="sa">f</span><span class="s2">&quot;Series.</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> does not allow </span><span class="si">{</span><span class="n">kwd_name</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="n">numeric_only</span><span class="si">}</span><span class="s2"> &quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">6455</span>         <span class="s2">&quot;with non-numeric dtypes.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">6456</span>     <span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">6457</span> <span class="k">return</span> <span class="n">op</span><span class="p">(</span><span class="n">delegate</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/nanops.py:147,</span> in <span class="ni">bottleneck_switch.__call__.&lt;locals&gt;.f</span><span class="nt">(values, axis, skipna, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">147</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">alt</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span> <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/nanops.py:404,</span> in <span class="ni">_datetimelike_compat.&lt;locals&gt;.new_func</span><span class="nt">(values, axis, skipna, mask, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">402</span>     <span class="n">mask</span> <span class="o">=</span> <span class="n">isna</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">404</span> <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="n">skipna</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">406</span> <span class="k">if</span> <span class="n">datetimelike</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/nanops.py:720,</span> in <span class="ni">nanmean</span><span class="nt">(values, axis, skipna, mask)</span>
+<span class="g g-Whitespace">    </span><span class="mi">719</span> <span class="n">the_sum</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_sum</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">720</span> <span class="n">the_sum</span> <span class="o">=</span> <span class="n">_ensure_numeric</span><span class="p">(</span><span class="n">the_sum</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span> <span class="k">if</span> <span class="n">axis</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">the_sum</span><span class="p">,</span> <span class="s2">&quot;ndim&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/nanops.py:1701,</span> in <span class="ni">_ensure_numeric</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1699</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1700</span>     <span class="c1"># GH#44008, GH#36703 avoid casting e.g. strings to numeric</span>
+<span class="ne">-&gt; </span><span class="mi">1701</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Could not convert string &#39;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&#39; to numeric&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1702</span> <span class="k">try</span><span class="p">:</span>
+
+<span class="ne">TypeError</span>: Could not convert string &#39;AlisterGabrieleTremainErichaRosaliaDoreKeeleyVidaKarleeIverRamVeronike&#39; to numeric
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">210</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">personel</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/groupby/groupby.py:2452,</span> in <span class="ni">GroupBy.mean</span><span class="nt">(self, numeric_only, engine, engine_kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2445</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numba_agg_general</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2446</span>         <span class="n">grouped_mean</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2447</span>         <span class="n">executor</span><span class="o">.</span><span class="n">float_dtype_mapping</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2448</span>         <span class="n">engine_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2449</span>         <span class="n">min_periods</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2450</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2451</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">2452</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cython_agg_general</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">2453</span>         <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2454</span>         <span class="n">alt</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">Series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">2455</span>         <span class="n">numeric_only</span><span class="o">=</span><span class="n">numeric_only</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">2456</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2457</span>     <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;groupby&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/groupby/groupby.py:1998,</span> in <span class="ni">GroupBy._cython_agg_general</span><span class="nt">(self, how, alt, numeric_only, min_count, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1995</span>     <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agg_py_fallback</span><span class="p">(</span><span class="n">how</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="n">alt</span><span class="o">=</span><span class="n">alt</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1996</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="ne">-&gt; </span><span class="mi">1998</span> <span class="n">new_mgr</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">grouped_reduce</span><span class="p">(</span><span class="n">array_func</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1999</span> <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wrap_agged_manager</span><span class="p">(</span><span class="n">new_mgr</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">2000</span> <span class="k">if</span> <span class="n">how</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;idxmin&quot;</span><span class="p">,</span> <span class="s2">&quot;idxmax&quot;</span><span class="p">]:</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/internals/managers.py:1469,</span> in <span class="ni">BlockManager.grouped_reduce</span><span class="nt">(self, func)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1465</span> <span class="k">if</span> <span class="n">blk</span><span class="o">.</span><span class="n">is_object</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1466</span>     <span class="c1"># split on object-dtype blocks bc some columns may raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">1467</span>     <span class="c1">#  while others do not.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1468</span>     <span class="k">for</span> <span class="n">sb</span> <span class="ow">in</span> <span class="n">blk</span><span class="o">.</span><span class="n">_split</span><span class="p">():</span>
+<span class="ne">-&gt; </span><span class="mi">1469</span>         <span class="n">applied</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1470</span>         <span class="n">result_blocks</span> <span class="o">=</span> <span class="n">extend_blocks</span><span class="p">(</span><span class="n">applied</span><span class="p">,</span> <span class="n">result_blocks</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1471</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/internals/blocks.py:393,</span> in <span class="ni">Block.apply</span><span class="nt">(self, func, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span> <span class="nd">@final</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span> <span class="k">def</span><span class="w"> </span><span class="nf">apply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Block</span><span class="p">]:</span>
+<span class="g g-Whitespace">    </span><span class="mi">389</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">390</span><span class="sd">     apply the function to my values; return a block if we are not</span>
+<span class="g g-Whitespace">    </span><span class="mi">391</span><span class="sd">     one</span>
+<span class="g g-Whitespace">    </span><span class="mi">392</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">393</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">395</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">maybe_coerce_values</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">396</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_split_op_result</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/groupby/groupby.py:1995,</span> in <span class="ni">GroupBy._cython_agg_general.&lt;locals&gt;.array_func</span><span class="nt">(values)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1992</span>     <span class="k">return</span> <span class="n">result</span>
+<span class="g g-Whitespace">   </span><span class="mi">1994</span> <span class="k">assert</span> <span class="n">alt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1995</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_agg_py_fallback</span><span class="p">(</span><span class="n">how</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">ndim</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">ndim</span><span class="p">,</span> <span class="n">alt</span><span class="o">=</span><span class="n">alt</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1996</span> <span class="k">return</span> <span class="n">result</span>
+
+<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/pandas/core/groupby/groupby.py:1946,</span> in <span class="ni">GroupBy._agg_py_fallback</span><span class="nt">(self, how, values, ndim, alt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1944</span>     <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;agg function failed [how-&gt;</span><span class="si">{</span><span class="n">how</span><span class="si">}</span><span class="s2">,dtype-&gt;</span><span class="si">{</span><span class="n">ser</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">]&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1945</span>     <span class="c1"># preserve the kind of exception that raised</span>
+<span class="ne">-&gt; </span><span class="mi">1946</span>     <span class="k">raise</span> <span class="nb">type</span><span class="p">(</span><span class="n">err</span><span class="p">)(</span><span class="n">msg</span><span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">1948</span> <span class="k">if</span> <span class="n">ser</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">object</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1949</span>     <span class="n">res_values</span> <span class="o">=</span> <span class="n">res_values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: agg function failed [how-&gt;mean,dtype-&gt;object]
 </pre></div>
 </div>
 </div>
