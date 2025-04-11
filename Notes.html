@@ -5514,92 +5514,16 @@ dtype: object
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Demo title&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x-data&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y-data&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">278</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x-data&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y-data&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/axes/_axes.py:1777,</span> in <span class="ni">Axes.plot</span><span class="nt">(self, scalex, scaley, data, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1534</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1535</span><span class="sd"> Plot y versus x as lines and/or markers.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1536</span><span class="sd"> </span>
-<span class="sd">   (...)   1774 (``&#39;green&#39;``) or hex strings (``&#39;#008000&#39;``).</span>
-<span class="g g-Whitespace">   </span><span class="mi">1775</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1776</span> <span class="n">kwargs</span> <span class="o">=</span> <span class="n">cbook</span><span class="o">.</span><span class="n">normalize_kwargs</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">mlines</span><span class="o">.</span><span class="n">Line2D</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1777</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1778</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1779</span>     <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/axes/_base.py:297,</span> in <span class="ni">_process_plot_var_args.__call__</span><span class="nt">(self, axes, data, return_kwargs, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span>     <span class="n">this</span> <span class="o">+=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">296</span>     <span class="n">args</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-<span class="ne">--&gt; </span><span class="mi">297</span> <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_args</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">298</span>     <span class="n">axes</span><span class="p">,</span> <span class="n">this</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">ambiguous_fmt_datakey</span><span class="o">=</span><span class="n">ambiguous_fmt_datakey</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">299</span>     <span class="n">return_kwargs</span><span class="o">=</span><span class="n">return_kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">300</span> <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/axes/_base.py:546,</span> in <span class="ni">_process_plot_var_args._plot_args</span><span class="nt">(self, axes, tup, kwargs, return_kwargs, ambiguous_fmt_datakey)</span>
-<span class="g g-Whitespace">    </span><span class="mi">544</span>     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">545</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">546</span>     <span class="k">return</span> <span class="p">[</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/axes/_base.py:539,</span> in <span class="ni">&lt;genexpr&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">534</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span>         <span class="sa">f</span><span class="s2">&quot;label must be scalar or have the same length as the input &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">537</span>         <span class="sa">f</span><span class="s2">&quot;data, but found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">label</span><span class="p">)</span><span class="si">}</span><span class="s2"> for </span><span class="si">{</span><span class="n">n_datasets</span><span class="si">}</span><span class="s2"> datasets.&quot;</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">539</span> <span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">make_artist</span><span class="p">(</span><span class="n">axes</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="n">j</span> <span class="o">%</span> <span class="n">ncx</span><span class="p">],</span> <span class="n">y</span><span class="p">[:,</span> <span class="n">j</span> <span class="o">%</span> <span class="n">ncy</span><span class="p">],</span> <span class="n">kw</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">540</span>                       <span class="p">{</span><span class="o">**</span><span class="n">kwargs</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="n">label</span><span class="p">})</span>
-<span class="nn">    541           for j, label</span> in <span class="ni">enumerate</span><span class="nt">(labels))</span>
-<span class="g g-Whitespace">    </span><span class="mi">543</span> <span class="k">if</span> <span class="n">return_kwargs</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">544</span>     <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/axes/_base.py:338,</span> in <span class="ni">_process_plot_var_args._make_line</span><span class="nt">(self, axes, x, y, kw, kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">336</span> <span class="n">kw</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">kw</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">}</span>  <span class="c1"># Don&#39;t modify the original kw.</span>
-<span class="g g-Whitespace">    </span><span class="mi">337</span> <span class="bp">self</span><span class="o">.</span><span class="n">_setdefaults</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_getdefaults</span><span class="p">(</span><span class="n">kw</span><span class="p">),</span> <span class="n">kw</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">338</span> <span class="n">seg</span> <span class="o">=</span> <span class="n">mlines</span><span class="o">.</span><span class="n">Line2D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">339</span> <span class="k">return</span> <span class="n">seg</span><span class="p">,</span> <span class="n">kw</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/lines.py:407,</span> in <span class="ni">Line2D.__init__</span><span class="nt">(self, xdata, ydata, linewidth, linestyle, color, gapcolor, marker, markersize, markeredgewidth, markeredgecolor, markerfacecolor, markerfacecoloralt, fillstyle, antialiased, dash_capstyle, solid_capstyle, dash_joinstyle, solid_joinstyle, pickradius, drawstyle, markevery, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">403</span> <span class="bp">self</span><span class="o">.</span><span class="n">set_markeredgewidth</span><span class="p">(</span><span class="n">markeredgewidth</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">405</span> <span class="c1"># update kwargs before updating data to give the caller a</span>
-<span class="g g-Whitespace">    </span><span class="mi">406</span> <span class="c1"># chance to init axes (and hence unit support)</span>
-<span class="ne">--&gt; </span><span class="mi">407</span> <span class="bp">self</span><span class="o">.</span><span class="n">_internal_update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">408</span> <span class="bp">self</span><span class="o">.</span><span class="n">pickradius</span> <span class="o">=</span> <span class="n">pickradius</span>
-<span class="g g-Whitespace">    </span><span class="mi">409</span> <span class="bp">self</span><span class="o">.</span><span class="n">ind_offset</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/artist.py:1233,</span> in <span class="ni">Artist._internal_update</span><span class="nt">(self, kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1226</span> <span class="k">def</span><span class="w"> </span><span class="nf">_internal_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1227</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1228</span><span class="sd">     Update artist properties without prenormalizing them, but generating</span>
-<span class="g g-Whitespace">   </span><span class="mi">1229</span><span class="sd">     errors as if calling `set`.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1230</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1231</span><span class="sd">     The lack of prenormalization is to maintain backcompatibility.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1232</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1233</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_props</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1234</span>         <span class="n">kwargs</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{cls.__name__}</span><span class="s2">.set() got an unexpected keyword argument &quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1235</span>         <span class="s2">&quot;</span><span class="si">{prop_name!r}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/artist.py:1206,</span> in <span class="ni">Artist._update_props</span><span class="nt">(self, props, errfmt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1204</span>             <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;set_</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1205</span>             <span class="k">if</span> <span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1206</span>                 <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1207</span>                     <span class="n">errfmt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">cls</span><span class="o">=</span><span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">),</span> <span class="n">prop_name</span><span class="o">=</span><span class="n">k</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1208</span>                     <span class="n">name</span><span class="o">=</span><span class="n">k</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1209</span>             <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">1210</span> <span class="k">if</span> <span class="n">ret</span><span class="p">:</span>
-
-<span class="ne">AttributeError</span>: Line2D.set() got an unexpected keyword argument &#39;kind&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7c5241c93d90&gt;]
 </pre></div>
 </div>
-<img alt="_images/dcd2fd67fff8b65781ee631047078dab55411042f571f634345227410cb0909e.png" src="_images/dcd2fd67fff8b65781ee631047078dab55411042f571f634345227410cb0909e.png" />
+<img alt="_images/1360922b9c333cdbe834c89df06197b99af7cc2fa540b8e040245414411e830b.png" src="_images/1360922b9c333cdbe834c89df06197b99af7cc2fa540b8e040245414411e830b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -5621,7 +5545,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d7d8b40e9e07f9e5693962d60e90c6cb6975a6e557344f9c2831f6e3465a6d1e.png" src="_images/d7d8b40e9e07f9e5693962d60e90c6cb6975a6e557344f9c2831f6e3465a6d1e.png" />
+<img alt="_images/297aabadc84cd90078bda1001d56ad60906a088c5b442a3b684c57f8cc6b3978.png" src="_images/297aabadc84cd90078bda1001d56ad60906a088c5b442a3b684c57f8cc6b3978.png" />
 </div>
 </div>
 <div class="cell docutils container">
