@@ -5242,7 +5242,7 @@ Name: salary, dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">personel</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;gender&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">personel</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="n">vert</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -5251,7 +5251,14 @@ Name: salary, dtype: int64
 dtype: object
 </pre></div>
 </div>
-<img alt="_images/7e23a1c230a4c2fda4cfaecb4fde3707cc8404e280daacc49c25a42c8464441a.png" src="_images/7e23a1c230a4c2fda4cfaecb4fde3707cc8404e280daacc49c25a42c8464441a.png" />
+<img alt="_images/c77f06e3bfbf02b1beb6843b3ad645777c282300673a8ccfb524649808276c13.png" src="_images/c77f06e3bfbf02b1beb6843b3ad645777c282300673a8ccfb524649808276c13.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">personel</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
 </div>
 </div>
 </section>
