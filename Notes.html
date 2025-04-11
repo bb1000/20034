@@ -5256,10 +5256,142 @@ dtype: object
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">personel</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">)</span><span class="o">.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">personel</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;gender&#39;</span><span class="p">)[</span><span class="s1">&#39;salary&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>gender</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Agender</th>
+      <td>12.0</td>
+      <td>96231.916667</td>
+      <td>33622.378677</td>
+      <td>38414.0</td>
+      <td>72965.75</td>
+      <td>101333.5</td>
+      <td>119789.75</td>
+      <td>149702.0</td>
+    </tr>
+    <tr>
+      <th>Bigender</th>
+      <td>20.0</td>
+      <td>87399.050000</td>
+      <td>37020.164347</td>
+      <td>28684.0</td>
+      <td>52147.25</td>
+      <td>95875.5</td>
+      <td>115418.00</td>
+      <td>138593.0</td>
+    </tr>
+    <tr>
+      <th>Female</th>
+      <td>448.0</td>
+      <td>86417.080357</td>
+      <td>38494.376223</td>
+      <td>20317.0</td>
+      <td>52904.00</td>
+      <td>86963.5</td>
+      <td>121934.00</td>
+      <td>148645.0</td>
+    </tr>
+    <tr>
+      <th>Genderfluid</th>
+      <td>17.0</td>
+      <td>95576.764706</td>
+      <td>32896.581404</td>
+      <td>36697.0</td>
+      <td>74373.00</td>
+      <td>102223.0</td>
+      <td>120759.00</td>
+      <td>149576.0</td>
+    </tr>
+    <tr>
+      <th>Genderqueer</th>
+      <td>24.0</td>
+      <td>86913.000000</td>
+      <td>42049.463061</td>
+      <td>22271.0</td>
+      <td>47929.75</td>
+      <td>87971.5</td>
+      <td>121489.25</td>
+      <td>149019.0</td>
+    </tr>
+    <tr>
+      <th>Male</th>
+      <td>444.0</td>
+      <td>84138.439189</td>
+      <td>36493.311676</td>
+      <td>20157.0</td>
+      <td>53360.75</td>
+      <td>82365.0</td>
+      <td>115660.00</td>
+      <td>149676.0</td>
+    </tr>
+    <tr>
+      <th>Non-binary</th>
+      <td>17.0</td>
+      <td>86857.529412</td>
+      <td>42239.068737</td>
+      <td>29927.0</td>
+      <td>48726.00</td>
+      <td>91899.0</td>
+      <td>128314.00</td>
+      <td>148927.0</td>
+    </tr>
+    <tr>
+      <th>Polygender</th>
+      <td>18.0</td>
+      <td>77018.111111</td>
+      <td>44610.251539</td>
+      <td>22343.0</td>
+      <td>34399.75</td>
+      <td>69915.5</td>
+      <td>119753.25</td>
+      <td>145094.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>
