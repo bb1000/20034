@@ -5497,6 +5497,175 @@ dtype: object
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plt.subplots<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span>
+plt.subplots(
+    nrows: <span class=" -Color -Color-Yellow">&#39;int&#39;</span> = <span class=" -Color -Color-Green">1</span>,
+    ncols: <span class=" -Color -Color-Yellow">&#39;int&#39;</span> = <span class=" -Color -Color-Green">1</span>,
+    *,
+    sharex: <span class=" -Color -Color-Yellow">&quot;bool | Literal[&#39;none&#39;, &#39;all&#39;, &#39;row&#39;, &#39;col&#39;]&quot;</span> = <span class=" -Color -Color-Bold -Color-Bold-C28">False</span>,
+    sharey: <span class=" -Color -Color-Yellow">&quot;bool | Literal[&#39;none&#39;, &#39;all&#39;, &#39;row&#39;, &#39;col&#39;]&quot;</span> = <span class=" -Color -Color-Bold -Color-Bold-C28">False</span>,
+    squeeze: <span class=" -Color -Color-Yellow">&#39;bool&#39;</span> = <span class=" -Color -Color-Bold -Color-Bold-C28">True</span>,
+    width_ratios: <span class=" -Color -Color-Yellow">&#39;Sequence[float] | None&#39;</span> = <span class=" -Color -Color-Bold -Color-Bold-C28">None</span>,
+    height_ratios: <span class=" -Color -Color-Yellow">&#39;Sequence[float] | None&#39;</span> = <span class=" -Color -Color-Bold -Color-Bold-C28">None</span>,
+    subplot_kw: <span class=" -Color -Color-Yellow">&#39;dict[str, Any] | None&#39;</span> = <span class=" -Color -Color-Bold -Color-Bold-C28">None</span>,
+    gridspec_kw: <span class=" -Color -Color-Yellow">&#39;dict[str, Any] | None&#39;</span> = <span class=" -Color -Color-Bold -Color-Bold-C28">None</span>,
+    **fig_kw,
+) -&gt; <span class=" -Color -Color-Yellow">&#39;tuple[Figure, Any]&#39;</span>
+<span class=" -Color -Color-Red">Docstring:</span>
+Create a figure and a set of subplots.
+
+This utility wrapper makes it convenient to create common layouts of
+subplots, including the enclosing figure object, in a single call.
+
+Parameters
+----------
+nrows, ncols : int, default: 1
+    Number of rows/columns of the subplot grid.
+
+sharex, sharey : bool or {&#39;none&#39;, &#39;all&#39;, &#39;row&#39;, &#39;col&#39;}, default: False
+    Controls sharing of properties among x (*sharex*) or y (*sharey*)
+    axes:
+
+    - True or &#39;all&#39;: x- or y-axis will be shared among all subplots.
+    - False or &#39;none&#39;: each subplot x- or y-axis will be independent.
+    - &#39;row&#39;: each subplot row will share an x- or y-axis.
+    - &#39;col&#39;: each subplot column will share an x- or y-axis.
+
+    When subplots have a shared x-axis along a column, only the x tick
+    labels of the bottom subplot are created. Similarly, when subplots
+    have a shared y-axis along a row, only the y tick labels of the first
+    column subplot are created. To later turn other subplots&#39; ticklabels
+    on, use `~matplotlib.axes.Axes.tick_params`.
+
+    When subplots have a shared axis that has units, calling
+    `.Axis.set_units` will update each axis with the new units.
+
+    Note that it is not possible to unshare axes.
+
+squeeze : bool, default: True
+    - If True, extra dimensions are squeezed out from the returned
+      array of `~matplotlib.axes.Axes`:
+
+      - if only one subplot is constructed (nrows=ncols=1), the
+        resulting single Axes object is returned as a scalar.
+      - for Nx1 or 1xM subplots, the returned object is a 1D numpy
+        object array of Axes objects.
+      - for NxM, subplots with N&gt;1 and M&gt;1 are returned as a 2D array.
+
+    - If False, no squeezing at all is done: the returned Axes object is
+      always a 2D array containing Axes instances, even if it ends up
+      being 1x1.
+
+width_ratios : array-like of length *ncols*, optional
+    Defines the relative widths of the columns. Each column gets a
+    relative width of ``width_ratios[i] / sum(width_ratios)``.
+    If not given, all columns will have the same width.  Equivalent
+    to ``gridspec_kw={&#39;width_ratios&#39;: [...]}``.
+
+height_ratios : array-like of length *nrows*, optional
+    Defines the relative heights of the rows. Each row gets a
+    relative height of ``height_ratios[i] / sum(height_ratios)``.
+    If not given, all rows will have the same height. Convenience
+    for ``gridspec_kw={&#39;height_ratios&#39;: [...]}``.
+
+subplot_kw : dict, optional
+    Dict with keywords passed to the
+    `~matplotlib.figure.Figure.add_subplot` call used to create each
+    subplot.
+
+gridspec_kw : dict, optional
+    Dict with keywords passed to the `~matplotlib.gridspec.GridSpec`
+    constructor used to create the grid the subplots are placed on.
+
+**fig_kw
+    All additional keyword arguments are passed to the
+    `.pyplot.figure` call.
+
+Returns
+-------
+fig : `.Figure`
+
+ax : `~matplotlib.axes.Axes` or array of Axes
+    *ax* can be either a single `~.axes.Axes` object, or an array of Axes
+    objects if more than one subplot was created.  The dimensions of the
+    resulting array can be controlled with the squeeze keyword, see above.
+
+    Typical idioms for handling the return value are::
+
+        # using the variable ax for single a Axes
+        fig, ax = plt.subplots()
+
+        # using the variable axs for multiple Axes
+        fig, axs = plt.subplots(2, 2)
+
+        # using tuple unpacking for multiple Axes
+        fig, (ax1, ax2) = plt.subplots(1, 2)
+        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
+
+    The names ``ax`` and pluralized ``axs`` are preferred over ``axes``
+    because for the latter it&#39;s not clear if it refers to a single
+    `~.axes.Axes` instance or a collection of these.
+
+See Also
+--------
+.pyplot.figure
+.pyplot.subplot
+.pyplot.axes
+.Figure.subplots
+.Figure.add_subplot
+
+Examples
+--------
+::
+
+    # First create some toy data:
+    x = np.linspace(0, 2*np.pi, 400)
+    y = np.sin(x**2)
+
+    # Create just a figure and only one subplot
+    fig, ax = plt.subplots()
+    ax.plot(x, y)
+    ax.set_title(&#39;Simple plot&#39;)
+
+    # Create two subplots and unpack the output array immediately
+    f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+    ax1.plot(x, y)
+    ax1.set_title(&#39;Sharing Y axis&#39;)
+    ax2.scatter(x, y)
+
+    # Create four polar Axes and access them through the returned array
+    fig, axs = plt.subplots(2, 2, subplot_kw=dict(projection=&quot;polar&quot;))
+    axs[0, 0].plot(x, y)
+    axs[1, 1].scatter(x, y)
+
+    # Share a X axis with each column of subplots
+    plt.subplots(2, 2, sharex=&#39;col&#39;)
+
+    # Share a Y axis with each row of subplots
+    plt.subplots(2, 2, sharey=&#39;row&#39;)
+
+    # Share both X and Y axes with all subplots
+    plt.subplots(2, 2, sharex=&#39;all&#39;, sharey=&#39;all&#39;)
+
+    # Note that this is the same as
+    plt.subplots(2, 2, sharex=True, sharey=True)
+
+    # Create figure number 10 with a single subplot
+    # and clears it if it already exists.
+    fig, ax = plt.subplots(num=10, clear=True)
+<span class=" -Color -Color-Red">File:</span>      ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/matplotlib/pyplot.py
+<span class=" -Color -Color-Red">Type:</span>      function
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
