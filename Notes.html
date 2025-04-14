@@ -811,7 +811,7 @@ to go
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="s2">&quot;It&#39;s time</span>
     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: unterminated string literal (detected at line 1)
@@ -854,7 +854,7 @@ to go
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">77</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="s2">&quot;Hello&quot;</span> <span class="o">*</span> <span class="s2">&quot; world&quot;</span>
 
 <span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;str&#39;
@@ -1201,7 +1201,7 @@ Raises IndexError if list is empty or index is out of range.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;hearts&#39;, 2)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;spades&#39;, 2)
 </pre></div>
 </div>
 </div>
@@ -1493,7 +1493,8 @@ Raises IndexError if list is empty or index is out of range.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;player1&#39;: (&#39;clubs&#39;, 4), &#39;player2&#39;: (&#39;hearts&#39;, 2)}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;player1&#39;: [(&#39;spades&#39;, 5), (&#39;clubs&#39;, 4)],
+ &#39;player2&#39;: [(&#39;diamonds&#39;, 10), (&#39;hearts&#39;, 2)]}
 </pre></div>
 </div>
 </div>
@@ -1789,7 +1790,7 @@ Player player2 has hand [(&#39;diamonds&#39;, 10), (&#39;hearts&#39;, 2)]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Kernel.raw_input of &lt;ipykernel.ipkernel.IPythonKernel object at 0x76c325a1b380&gt;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Kernel.raw_input of &lt;ipykernel.ipkernel.IPythonKernel object at 0x7480fb3fb620&gt;&gt;
 </pre></div>
 </div>
 </div>
@@ -1801,7 +1802,7 @@ Player player2 has hand [(&#39;diamonds&#39;, 10), (&#39;hearts&#39;, 2)]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hello&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;xxx&#39;
 </pre></div>
 </div>
 </div>
@@ -2185,7 +2186,7 @@ calculate_hand_value3(
     card_game={<span class=" -Color -Color-Yellow">&#39;player1&#39;</span>: [(<span class=" -Color -Color-Yellow">&#39;spades&#39;</span>, <span class=" -Color -Color-Green">5</span>), (<span class=" -Color -Color-Yellow">&#39;clubs&#39;</span>, <span class=" -Color -Color-Green">4</span>)], <span class=" -Color -Color-Yellow">&#39;player2&#39;</span>: [(<span class=" -Color -Color-Yellow">&#39;diamonds&#39;</span>, <span class=" -Color -Color-Green">10</span>), (<span class=" -Color -Color-Yellow">&#39;hearts&#39;</span>, <span class=" -Color -Color-Green">2</span>)]},
 )
 <span class=" -Color -Color-Red">Docstring:</span> Calculate the value of the hand of player
-<span class=" -Color -Color-Red">File:</span>      /tmp/ipykernel_127327/3892734418.py
+<span class=" -Color -Color-Red">File:</span>      /tmp/ipykernel_90890/3892734418.py
 <span class=" -Color -Color-Red">Type:</span>      function
 </pre></div>
 </div>
@@ -2230,8 +2231,8 @@ calculate_hand_value3(
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">176</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">_value</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">162</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">_value</span> <span class="c1"># only defined locally inside the function, not globally</span>
 
 <span class="ne">NameError</span>: name &#39;_value&#39; is not defined
 </pre></div>
@@ -2244,6 +2245,11 @@ calculate_hand_value3(
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">hello</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The value of __name__ is hello
 </pre></div>
 </div>
 </div>
@@ -2263,7 +2269,8 @@ calculate_hand_value3(
  &#39;__name__&#39;,
  &#39;__package__&#39;,
  &#39;__spec__&#39;,
- &#39;hello_world&#39;]
+ &#39;hello_world&#39;,
+ &#39;sys&#39;]
 </pre></div>
 </div>
 </div>
@@ -2275,7 +2282,7 @@ calculate_hand_value3(
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello -f
 Goodbye
 </pre></div>
 </div>
@@ -2589,15 +2596,24 @@ GOODBYE
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 92
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  1816 mar 31 16:00 Demo.ipynb
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   279 mar 31 15:55 hello.py
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    14 mar 31 16:46 hello.txt
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   149 mar 31 16:30 mult_table.py
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     0 mar 31 16:57 newhello.txt
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25 68397 mar 31 16:58 Notes.ipynb
-drwxrwxr-x 2 bb1000-vt25 bb1000-vt25  4096 mar 31 15:55 __pycache__
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    91 mar 18 09:39 untitled.md
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 920
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25   5000 apr  8 15:58 data.txt
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   1816 mar 31 16:00 Demo.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    280 apr  1 08:49 hello.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     14 mar 31 16:46 hello.txt
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    149 mar 31 16:30 mult_table.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25      0 apr 14 16:41 newhello.txt
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  85046 apr 14 16:40 Notes.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   2750 apr  7 16:21 numbers.txt
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25  41855 apr 11 13:55 numpy-2025-04-11.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  21699 apr 11 13:24 numpy-2025-04-11.zip
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     18 apr 14 16:21 omdb.py
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25 425009 apr 14 16:34 pandas-2025-04-11.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25 306031 apr 14 15:20 pandas-2025-04-11.zip
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    116 apr  8 09:31 plotdemo.py
+drwxrwxr-x 2 bb1000-vt25 bb1000-vt25   4096 apr 14 16:41 __pycache__
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25   6742 apr 14 14:49 TSLA.csv
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     91 mar 18 09:39 untitled.md
 </pre></div>
 </div>
 </div>
@@ -2616,7 +2632,7 @@ drwxrwxr-x 2 bb1000-vt25 bb1000-vt25  4096 mar 31 15:55 __pycache__
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25 11 mar 31 17:00 newhello.txt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25 11 apr 14 16:41 newhello.txt
 </pre></div>
 </div>
 </div>
@@ -2942,7 +2958,7 @@ csv.DictReader(
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">209</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span> <span class="c1"># line will be a dictionary with header values as keys</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">break</span>
@@ -3470,7 +3486,7 @@ csv.DictReader(
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span>       numpy.linalg.solve(a, b)
 <span class=" -Color -Color-Red">Call signature:</span>  numpy.linalg.solve(*args, **kwargs)
 <span class=" -Color -Color-Red">Type:</span>            _ArrayFunctionDispatcher
-<span class=" -Color -Color-Red">String form:</span>     &lt;function solve at 0x7c52f01031a0&gt;
+<span class=" -Color -Color-Red">String form:</span>     &lt;function solve at 0x7480f82de3e0&gt;
 <span class=" -Color -Color-Red">File:</span>            ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/numpy/linalg/_linalg.py
 <span class=" -Color -Color-Red">Docstring:</span>      
 Solve a linear matrix equation, or system of linear scalar equations.
@@ -3769,7 +3785,7 @@ _implementation : function
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop timing 146.2091507911682
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop timing 136.52003264427185
 </pre></div>
 </div>
 </div>
@@ -3784,7 +3800,7 @@ _implementation : function
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop timing 0.0049588680267333984
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop timing 0.03420901298522949
 </pre></div>
 </div>
 </div>
@@ -3813,7 +3829,7 @@ _implementation : function
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">LinAlgError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">129</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">249</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 
 <span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/numpy/linalg/_linalg.py:609,</span> in <span class="ni">inv</span><span class="nt">(a)</span>
@@ -4506,7 +4522,7 @@ Name: capital, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1493964/1863415940.py:2: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_90890/1863415940.py:2: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
 You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
 A typical example is when you are setting values in a column of a DataFrame, like:
 
@@ -4517,7 +4533,7 @@ Use `df.loc[row_indexer, &quot;col&quot;] = values` instead, to perform the assi
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 
   df[&#39;population&#39;][&#39;Belgium&#39;] = 11.4
-/tmp/ipykernel_1493964/1863415940.py:2: SettingWithCopyWarning: 
+/tmp/ipykernel_90890/1863415940.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -4780,7 +4796,7 @@ France            False
 Germany           False
 Netherlands        True
 United Kingdom    False
-dtype: bool
+Name: density, dtype: bool
 </pre></div>
 </div>
 </div>
@@ -4891,35 +4907,35 @@ dtype: bool
     <tr>
       <th>Belgium</th>
       <td>11.5</td>
-      <td>3.0510</td>
+      <td>30.510</td>
       <td>Brussels</td>
       <td>0.376926</td>
     </tr>
     <tr>
       <th>France</th>
       <td>64.3</td>
-      <td>67.1308</td>
+      <td>671.308</td>
       <td>Paris</td>
       <td>0.095783</td>
     </tr>
     <tr>
       <th>Germany</th>
       <td>81.3</td>
-      <td>35.7050</td>
+      <td>357.050</td>
       <td>Berlin</td>
       <td>0.227699</td>
     </tr>
     <tr>
       <th>Netherlands</th>
       <td>16.9</td>
-      <td>4.1526</td>
+      <td>41.526</td>
       <td>Amsterdam</td>
       <td>0.406974</td>
     </tr>
     <tr>
       <th>United Kingdom</th>
       <td>64.9</td>
-      <td>24.4820</td>
+      <td>244.820</td>
       <td>London</td>
       <td>0.265093</td>
     </tr>
@@ -4937,7 +4953,7 @@ dtype: bool
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;country&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/6f18e6af6a89957e14d52e83b679efb542cc7472cfaad8254a8c42ba49d79dda.png" src="_images/6f18e6af6a89957e14d52e83b679efb542cc7472cfaad8254a8c42ba49d79dda.png" />
+<img alt="_images/c5f05156364d8585695d40aa85d3bf8428282ad0fd1f6173e3577a9928e17b4b.png" src="_images/c5f05156364d8585695d40aa85d3bf8428282ad0fd1f6173e3577a9928e17b4b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -4950,7 +4966,7 @@ dtype: bool
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;country&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/09323629eb6d2d113baa94af34d85fd11edd1bac2d040351db0efb4eac1700c0.png" src="_images/09323629eb6d2d113baa94af34d85fd11edd1bac2d040351db0efb4eac1700c0.png" />
+<img alt="_images/e8b31bebe9e7a4d8e184cfbfe054b9d2aef9cce75bdae57e3b7ba7d8dd41766e.png" src="_images/e8b31bebe9e7a4d8e184cfbfe054b9d2aef9cce75bdae57e3b7ba7d8dd41766e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -5520,10 +5536,44 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7c5240e06c10&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7480c5b88910&gt;]
 </pre></div>
 </div>
 <img alt="_images/d77527930ac61e0e73bf3d1c494e4407033d78700ca159a648021c3c0de33fee.png" src="_images/d77527930ac61e0e73bf3d1c494e4407033d78700ca159a648021c3c0de33fee.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span>
+<span class="n">seaborn</span><span class="o">.</span><span class="n">set_theme</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;ticks&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;pastel&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">personel</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;department&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;salary&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;salary&#39;, ylabel=&#39;department&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/20dc60c73fdfc4004ba510236b1195222d80f756cda3896cf90b6245cb6a8370.png" src="_images/20dc60c73fdfc4004ba510236b1195222d80f756cda3896cf90b6245cb6a8370.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seaborn</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">personel</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;department&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;salary&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;salary&#39;, ylabel=&#39;department&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/0a27f26a2aef5f636c9d511e496bae9f07884db8487ee83d931f59cc3eeeb693.png" src="_images/0a27f26a2aef5f636c9d511e496bae9f07884db8487ee83d931f59cc3eeeb693.png" />
 </div>
 </div>
 </section>
