@@ -406,7 +406,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframes">Dataframes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-the-lab">Notes on the lab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-the-lab">Notes on the lab</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-plots">Interactive plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducing-gapminder-presentation-by-hans-rosling">Reproducing gapminder presentation by Hans Rosling</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -5576,6 +5580,953 @@ dtype: object
 <img alt="_images/0a27f26a2aef5f636c9d511e496bae9f07884db8487ee83d931f59cc3eeeb693.png" src="_images/0a27f26a2aef5f636c9d511e496bae9f07884db8487ee83d931f59cc3eeeb693.png" />
 </div>
 </div>
+<section id="interactive-plots">
+<h3>Interactive plots<a class="headerlink" href="#interactive-plots" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f918884fb10&gt;]
+</pre></div>
+</div>
+<img alt="_images/ac370fe4e8e6308677c977c2a690893190a58ec789b90cc8ec0c854bf8e77bd0.png" src="_images/ac370fe4e8e6308677c977c2a690893190a58ec789b90cc8ec0c854bf8e77bd0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sinplot</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mf">.1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">freq</span><span class="o">*</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sinplot</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sinplot</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/ac370fe4e8e6308677c977c2a690893190a58ec789b90cc8ec0c854bf8e77bd0.png" src="_images/ac370fe4e8e6308677c977c2a690893190a58ec789b90cc8ec0c854bf8e77bd0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!conda install ipywidgets -y</span>
+<span class="c1">#!conda install jupyterlab_widgets -y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">ipywidgets</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">freq_slider</span> <span class="o">=</span> <span class="n">ipywidgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ipywidgets</span><span class="o">.</span><span class="n">interact</span><span class="p">(</span><span class="n">sinplot</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="n">freq_slider</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "5c8b64f3bdc7495a84947afc28b55fe9", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.sinplot(freq=1.0)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9172d8f890&gt;]
+</pre></div>
+</div>
+<img alt="_images/3a351d16f70a2e9d376fd2a37039ba4c92627e67e9e56be9344aa60e733ba20b.png" src="_images/3a351d16f70a2e9d376fd2a37039ba4c92627e67e9e56be9344aa60e733ba20b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gaussplot</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gaussplot</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">gaussplot</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3a351d16f70a2e9d376fd2a37039ba4c92627e67e9e56be9344aa60e733ba20b.png" src="_images/3a351d16f70a2e9d376fd2a37039ba4c92627e67e9e56be9344aa60e733ba20b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">FloatSlider</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">gaussplot</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">FloatSlider</span><span class="p">(</span><span class="nb">min</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="nb">max</span><span class="o">=</span><span class="mf">2.0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d27db412cb9545fba1c4dd729b6b89b2", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.gaussplot(a=1)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="reproducing-gapminder-presentation-by-hans-rosling">
+<h3>Reproducing gapminder presentation by Hans Rosling<a class="headerlink" href="#reproducing-gapminder-presentation-by-hans-rosling" title="Link to this heading">#</a></h3>
+<p>Youtube: <a class="reference external" href="https://www.ted.com/talks/hans_rosling_new_insights_on_poverty">https://www.ted.com/talks/hans_rosling_new_insights_on_poverty</a></p>
+<p><img alt="screenshot" src="rosling.png" /></p>
+<p>Can we reproduce the figure to some degree? Data is online at <a class="reference external" href="https://www.gapminder.org/data/">https://www.gapminder.org/data/</a></p>
+<ul class="simple">
+<li><p>Scatterplot</p></li>
+<li><p>x-value GDP per capita</p></li>
+<li><p>y-values Infant mortality</p></li>
+<li><p>each circle is a country</p></li>
+<li><p>size reflects population</p></li>
+<li><p>color reflects geographic region</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;pop.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
+<span class="n">pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1800</th>
+      <th>1801</th>
+      <th>1802</th>
+      <th>1803</th>
+      <th>1804</th>
+      <th>1805</th>
+      <th>1806</th>
+      <th>1807</th>
+      <th>1808</th>
+      <th>1809</th>
+      <th>...</th>
+      <th>2091</th>
+      <th>2092</th>
+      <th>2093</th>
+      <th>2094</th>
+      <th>2095</th>
+      <th>2096</th>
+      <th>2097</th>
+      <th>2098</th>
+      <th>2099</th>
+      <th>2100</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>3.28M</td>
+      <td>...</td>
+      <td>124M</td>
+      <td>125M</td>
+      <td>126M</td>
+      <td>126M</td>
+      <td>127M</td>
+      <td>128M</td>
+      <td>128M</td>
+      <td>129M</td>
+      <td>130M</td>
+      <td>130M</td>
+    </tr>
+    <tr>
+      <th>Angola</th>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>1.57M</td>
+      <td>...</td>
+      <td>139M</td>
+      <td>140M</td>
+      <td>142M</td>
+      <td>143M</td>
+      <td>144M</td>
+      <td>145M</td>
+      <td>147M</td>
+      <td>148M</td>
+      <td>149M</td>
+      <td>150M</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>400k</td>
+      <td>402k</td>
+      <td>404k</td>
+      <td>405k</td>
+      <td>407k</td>
+      <td>409k</td>
+      <td>411k</td>
+      <td>413k</td>
+      <td>414k</td>
+      <td>416k</td>
+      <td>...</td>
+      <td>1.34M</td>
+      <td>1.32M</td>
+      <td>1.3M</td>
+      <td>1.29M</td>
+      <td>1.27M</td>
+      <td>1.25M</td>
+      <td>1.23M</td>
+      <td>1.22M</td>
+      <td>1.2M</td>
+      <td>1.18M</td>
+    </tr>
+    <tr>
+      <th>Andorra</th>
+      <td>2650</td>
+      <td>2650</td>
+      <td>2650</td>
+      <td>2650</td>
+      <td>2650</td>
+      <td>2650</td>
+      <td>2650</td>
+      <td>2650</td>
+      <td>2650</td>
+      <td>2650</td>
+      <td>...</td>
+      <td>52.8k</td>
+      <td>52.1k</td>
+      <td>51.5k</td>
+      <td>50.8k</td>
+      <td>50.2k</td>
+      <td>49.6k</td>
+      <td>49k</td>
+      <td>48.4k</td>
+      <td>47.8k</td>
+      <td>47.2k</td>
+    </tr>
+    <tr>
+      <th>UAE</th>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>40.2k</td>
+      <td>...</td>
+      <td>24.1M</td>
+      <td>24.3M</td>
+      <td>24.5M</td>
+      <td>24.7M</td>
+      <td>25M</td>
+      <td>25.2M</td>
+      <td>25.4M</td>
+      <td>25.7M</td>
+      <td>25.9M</td>
+      <td>26.1M</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 301 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gdp_pcap.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
+<span class="n">gdp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1800</th>
+      <th>1801</th>
+      <th>1802</th>
+      <th>1803</th>
+      <th>1804</th>
+      <th>1805</th>
+      <th>1806</th>
+      <th>1807</th>
+      <th>1808</th>
+      <th>1809</th>
+      <th>...</th>
+      <th>2091</th>
+      <th>2092</th>
+      <th>2093</th>
+      <th>2094</th>
+      <th>2095</th>
+      <th>2096</th>
+      <th>2097</th>
+      <th>2098</th>
+      <th>2099</th>
+      <th>2100</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>481</td>
+      <td>481</td>
+      <td>481</td>
+      <td>481</td>
+      <td>481</td>
+      <td>481</td>
+      <td>481</td>
+      <td>481</td>
+      <td>481</td>
+      <td>481</td>
+      <td>...</td>
+      <td>4680</td>
+      <td>4790</td>
+      <td>4910</td>
+      <td>5020</td>
+      <td>5140</td>
+      <td>5260</td>
+      <td>5380</td>
+      <td>5510</td>
+      <td>5640</td>
+      <td>5780</td>
+    </tr>
+    <tr>
+      <th>Angola</th>
+      <td>373</td>
+      <td>374</td>
+      <td>376</td>
+      <td>378</td>
+      <td>379</td>
+      <td>381</td>
+      <td>383</td>
+      <td>385</td>
+      <td>386</td>
+      <td>388</td>
+      <td>...</td>
+      <td>24.5k</td>
+      <td>25k</td>
+      <td>25.6k</td>
+      <td>26.1k</td>
+      <td>26.6k</td>
+      <td>27.1k</td>
+      <td>27.7k</td>
+      <td>28.2k</td>
+      <td>28.8k</td>
+      <td>29.3k</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>469</td>
+      <td>471</td>
+      <td>472</td>
+      <td>473</td>
+      <td>475</td>
+      <td>476</td>
+      <td>477</td>
+      <td>479</td>
+      <td>480</td>
+      <td>482</td>
+      <td>...</td>
+      <td>54.5k</td>
+      <td>55.1k</td>
+      <td>55.7k</td>
+      <td>56.3k</td>
+      <td>56.9k</td>
+      <td>57.4k</td>
+      <td>58k</td>
+      <td>58.6k</td>
+      <td>59.2k</td>
+      <td>59.8k</td>
+    </tr>
+    <tr>
+      <th>Andorra</th>
+      <td>1370</td>
+      <td>1370</td>
+      <td>1370</td>
+      <td>1380</td>
+      <td>1380</td>
+      <td>1380</td>
+      <td>1390</td>
+      <td>1390</td>
+      <td>1390</td>
+      <td>1390</td>
+      <td>...</td>
+      <td>79.9k</td>
+      <td>80.2k</td>
+      <td>80.4k</td>
+      <td>80.7k</td>
+      <td>81k</td>
+      <td>81.3k</td>
+      <td>81.5k</td>
+      <td>81.8k</td>
+      <td>82k</td>
+      <td>82.3k</td>
+    </tr>
+    <tr>
+      <th>UAE</th>
+      <td>1140</td>
+      <td>1150</td>
+      <td>1150</td>
+      <td>1150</td>
+      <td>1160</td>
+      <td>1160</td>
+      <td>1170</td>
+      <td>1170</td>
+      <td>1180</td>
+      <td>1180</td>
+      <td>...</td>
+      <td>92.6k</td>
+      <td>92.6k</td>
+      <td>92.6k</td>
+      <td>92.7k</td>
+      <td>92.7k</td>
+      <td>92.7k</td>
+      <td>92.8k</td>
+      <td>92.8k</td>
+      <td>92.8k</td>
+      <td>92.9k</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 301 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">childm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;child_mortality_0_5_year_olds_dying_per_1000_born.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
+<span class="n">childm</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>1800</th>
+      <th>1801</th>
+      <th>1802</th>
+      <th>1803</th>
+      <th>1804</th>
+      <th>1805</th>
+      <th>1806</th>
+      <th>1807</th>
+      <th>1808</th>
+      <th>1809</th>
+      <th>...</th>
+      <th>2091</th>
+      <th>2092</th>
+      <th>2093</th>
+      <th>2094</th>
+      <th>2095</th>
+      <th>2096</th>
+      <th>2097</th>
+      <th>2098</th>
+      <th>2099</th>
+      <th>2100</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>469.0</td>
+      <td>469.0</td>
+      <td>469.0</td>
+      <td>469.0</td>
+      <td>469.0</td>
+      <td>469.0</td>
+      <td>470.0</td>
+      <td>470.0</td>
+      <td>470.0</td>
+      <td>470.0</td>
+      <td>...</td>
+      <td>12.60</td>
+      <td>12.40</td>
+      <td>12.20</td>
+      <td>12.00</td>
+      <td>11.80</td>
+      <td>11.60</td>
+      <td>11.50</td>
+      <td>11.30</td>
+      <td>11.10</td>
+      <td>11.10</td>
+    </tr>
+    <tr>
+      <th>Angola</th>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>486.0</td>
+      <td>...</td>
+      <td>17.70</td>
+      <td>17.50</td>
+      <td>17.30</td>
+      <td>17.10</td>
+      <td>17.00</td>
+      <td>16.80</td>
+      <td>16.60</td>
+      <td>16.40</td>
+      <td>16.30</td>
+      <td>16.30</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>375.0</td>
+      <td>...</td>
+      <td>2.32</td>
+      <td>2.30</td>
+      <td>2.27</td>
+      <td>2.24</td>
+      <td>2.22</td>
+      <td>2.19</td>
+      <td>2.16</td>
+      <td>2.14</td>
+      <td>2.11</td>
+      <td>2.11</td>
+    </tr>
+    <tr>
+      <th>Andorra</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.86</td>
+      <td>0.84</td>
+      <td>0.83</td>
+      <td>0.81</td>
+      <td>0.80</td>
+      <td>0.79</td>
+      <td>0.78</td>
+      <td>0.77</td>
+      <td>0.76</td>
+      <td>0.76</td>
+    </tr>
+    <tr>
+      <th>UAE</th>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>434.0</td>
+      <td>...</td>
+      <td>2.31</td>
+      <td>2.29</td>
+      <td>2.26</td>
+      <td>2.24</td>
+      <td>2.22</td>
+      <td>2.19</td>
+      <td>2.17</td>
+      <td>2.15</td>
+      <td>2.13</td>
+      <td>2.13</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 301 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;Norway&#39;</span><span class="p">,</span> <span class="s1">&#39;Denmark&#39;</span><span class="p">],</span> <span class="s1">&#39;1921&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">childm</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;Norway&#39;</span><span class="p">,</span> <span class="s1">&#39;Denmark&#39;</span><span class="p">],</span> <span class="s1">&#39;1921&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>country
+Sweden     5200
+Norway     4830
+Denmark    6980
+Name: 1921, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>country
+Sweden     84.6
+Norway     71.8
+Denmark    91.3
+Name: 1921, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f91706af110&gt;
+</pre></div>
+</div>
+<img alt="_images/7400ec3d95b47690ea7de5b2da774d95f8dcefaa13f2b8e3c01e8c6cc1528da3.png" src="_images/7400ec3d95b47690ea7de5b2da774d95f8dcefaa13f2b8e3c01e8c6cc1528da3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">gdp</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">childm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(195, 197)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;GDP&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;1921&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">childm</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">&#39;1921&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pop</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span> <span class="p">,</span><span class="s1">&#39;1921&#39;</span><span class="p">]</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GDP</th>
+      <th>Child mortality</th>
+      <th>Population</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>908</td>
+      <td>465.0</td>
+      <td>10.6M</td>
+    </tr>
+    <tr>
+      <th>Angola</th>
+      <td>776</td>
+      <td>465.0</td>
+      <td>2.91M</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>820</td>
+      <td>359.0</td>
+      <td>943k</td>
+    </tr>
+    <tr>
+      <th>Andorra</th>
+      <td>4870</td>
+      <td>NaN</td>
+      <td>5610</td>
+    </tr>
+    <tr>
+      <th>UAE</th>
+      <td>2520</td>
+      <td>416.0</td>
+      <td>57.3k</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Samoa</th>
+      <td>2430</td>
+      <td>204.0</td>
+      <td>40.7k</td>
+    </tr>
+    <tr>
+      <th>Yemen</th>
+      <td>1420</td>
+      <td>517.0</td>
+      <td>3.49M</td>
+    </tr>
+    <tr>
+      <th>South Africa</th>
+      <td>2220</td>
+      <td>381.0</td>
+      <td>7.3M</td>
+    </tr>
+    <tr>
+      <th>Zambia</th>
+      <td>799</td>
+      <td>392.0</td>
+      <td>1.48M</td>
+    </tr>
+    <tr>
+      <th>Zimbabwe</th>
+      <td>731</td>
+      <td>379.0</td>
+      <td>1.56M</td>
+    </tr>
+  </tbody>
+</table>
+<p>195 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;GDP&#39;, ylabel=&#39;Child mortality&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/a86823186bfa14296a1166fc8fe4e4b94ae32117f3f347867448b0a6407b9e1c.png" src="_images/a86823186bfa14296a1166fc8fe4e4b94ae32117f3f347867448b0a6407b9e1c.png" />
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -5656,7 +6607,11 @@ dtype: object
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframes">Dataframes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-the-lab">Notes on the lab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes-on-the-lab">Notes on the lab</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interactive-plots">Interactive plots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducing-gapminder-presentation-by-hans-rosling">Reproducing gapminder presentation by Hans Rosling</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
