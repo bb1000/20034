@@ -7656,7 +7656,24 @@ TOTAL         4      0   100%
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="err">!</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pytest<span class="w"> </span>test_leap.py<span class="w"> </span>--cov<span class="w"> </span>leap<span class="w"> </span>--cov-report<span class="o">=</span>html
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/bb1000-vt25/bb1000
+plugins: cov-6.0.0, anyio-4.8.0
+collected 7 items                                                              
+
+test_leap.py <span class=" -Color -Color-Green">.......                                                     [100%]</span>
+
+---------- coverage: platform linux, python 3.13.2-final-0 -----------
+Coverage HTML written to dir htmlcov
+
+
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">7 passed</span><span class=" -Color -Color-Green"> in 0.10s ===============================</span>
 </pre></div>
 </div>
 </div>
