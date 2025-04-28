@@ -7501,9 +7501,9 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 <span class="kn">from</span><span class="w"> </span><span class="nn">leap</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_leap_year</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
-<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">,</span> <span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;year,expected&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="mi">2000</span><span class="p">,</span> <span class="kc">True</span><span class="p">)])</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">==</span> <span class="n">ex</span>
     <span class="c1">#assert is_leap_year(1999) == False</span>
     <span class="c1">##assert is_leap_year(1998) == False</span>
     <span class="c1">#assert is_leap_year(1996) == True</span>
