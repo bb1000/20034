@@ -7351,7 +7351,10 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns True for leap years</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -7381,14 +7384,17 @@ test_leap.py <span class=" -Color -Color-Red">F                                 
 
     def test_leap_year():
         assert is_leap_year(2000) == True
-&gt;       assert is_leap_year(1999) == False
+        assert is_leap_year(1999) == False
+        assert is_leap_year(1998) == False
+        assert is_leap_year(1996) == True
+&gt;       assert is_leap_year(1900) == False
 <span class=" -Color -Color-Bold -Color-Bold-Red">E       assert True == False</span>
-<span class=" -Color -Color-Bold -Color-Bold-Red">E        +  where True = is_leap_year(1999)</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E        +  where True = is_leap_year(1900)</span>
 
-<span class=" -Color -Color-Bold -Color-Bold-Red">test_leap.py</span>:4: AssertionError
+<span class=" -Color -Color-Bold -Color-Bold-Red">test_leap.py</span>:7: AssertionError
 <span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
 <span class=" -Color -Color-Red">FAILED</span> test_leap.py::<span class=" -Color -Color-Bold">test_leap_year</span> - assert True == False
-<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span><span class=" -Color -Color-Red"> in 0.13s ===============================</span>
+<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span><span class=" -Color -Color-Red"> in 0.10s ===============================</span>
 </pre></div>
 </div>
 </div>
