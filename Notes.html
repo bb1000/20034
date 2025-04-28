@@ -7461,15 +7461,8 @@ test_leap.py::test_leap_year <span class=" -Color -Color-Green">PASSED          
 <span class="sd">    Returns True for leap years</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="c1">#if year % 4 == 0:</span>
-        <span class="c1">##    return True</span>
-        <span class="c1">#else:</span>
-        <span class="c1">#    return False</span>
         <span class="k">return</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>
@@ -7482,32 +7475,22 @@ test_leap.py::test_leap_year <span class=" -Color -Color-Green">PASSED          
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pytest
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pytest<span class="w"> </span>-v
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
-platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /home/bb1000-vt25/miniconda3/envs/bb1000/bin/python3.13
+cachedir: .pytest_cache
 rootdir: /home/bb1000-vt25/bb1000
 plugins: anyio-4.8.0
-collected 3 items                                                              
+collected 2 items                                                              
 
-test_leap.py <span class=" -Color -Color-Green">.                                                           [ 33%]</span>
-test_leap_year.py <span class=" -Color -Color-Red">F                                                      [ 66%]</span>
-test_my_math.py <span class=" -Color -Color-Green">.</span><span class=" -Color -Color-Red">                                                        [100%]</span>
+test_leap.py::test_leap_year <span class=" -Color -Color-Green">PASSED                                      [ 50%]</span>
+test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED                                      [100%]</span>
 
-=================================== FAILURES ===================================
-<span class=" -Color -Color-Bold -Color-Bold-Red">________________________________ test_leap_year ________________________________</span>
-
-    def test_leap_year():
-&gt;       assert is_leap_year(2000) == True
-<span class=" -Color -Color-Bold -Color-Bold-Red">E       NameError: name &#39;is_leap_year&#39; is not defined</span>
-
-<span class=" -Color -Color-Bold -Color-Bold-Red">test_leap_year.py</span>:2: NameError
-<span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
-<span class=" -Color -Color-Red">FAILED</span> test_leap_year.py::<span class=" -Color -Color-Bold">test_leap_year</span> - NameError: name &#39;is_leap_year&#39; is not defined
-<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">2 passed</span><span class=" -Color -Color-Red"> in 0.15s ==========================</span>
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">2 passed</span><span class=" -Color -Color-Green"> in 0.03s ===============================</span>
 </pre></div>
 </div>
 </div>
