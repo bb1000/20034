@@ -7351,6 +7351,7 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns True for leap years</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>
@@ -7379,14 +7380,15 @@ test_leap.py <span class=" -Color -Color-Red">F                                 
 <span class=" -Color -Color-Bold -Color-Bold-Red">________________________________ test_leap_year ________________________________</span>
 
     def test_leap_year():
-&gt;       assert is_leap_year(2000) == True
-<span class=" -Color -Color-Bold -Color-Bold-Red">E       assert None == True</span>
-<span class=" -Color -Color-Bold -Color-Bold-Red">E        +  where None = is_leap_year(2000)</span>
+        assert is_leap_year(2000) == True
+&gt;       assert is_leap_year(1999) == False
+<span class=" -Color -Color-Bold -Color-Bold-Red">E       assert True == False</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E        +  where True = is_leap_year(1999)</span>
 
-<span class=" -Color -Color-Bold -Color-Bold-Red">test_leap.py</span>:3: AssertionError
+<span class=" -Color -Color-Bold -Color-Bold-Red">test_leap.py</span>:4: AssertionError
 <span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
-<span class=" -Color -Color-Red">FAILED</span> test_leap.py::<span class=" -Color -Color-Bold">test_leap_year</span> - assert None == True
-<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span><span class=" -Color -Color-Red"> in 0.16s ===============================</span>
+<span class=" -Color -Color-Red">FAILED</span> test_leap.py::<span class=" -Color -Color-Bold">test_leap_year</span> - assert True == False
+<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span><span class=" -Color -Color-Red"> in 0.13s ===============================</span>
 </pre></div>
 </div>
 </div>
