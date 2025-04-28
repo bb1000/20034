@@ -7554,6 +7554,74 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># coverage</span>
+<span class="o">!</span>conda<span class="w"> </span>install<span class="w"> </span>pytest-cov<span class="w"> </span>-y
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+
+==&gt; WARNING: A newer version of conda exists. &lt;==
+    current version: 25.1.1
+    latest version: 25.3.1
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/bb1000-vt25/miniconda3/envs/bb1000
+
+  added / updated specs:
+    - pytest-cov
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    coverage-7.6.9             |  py313h5eee18b_0         380 KB
+    pytest-cov-6.0.0           |  py313h06a4308_0          43 KB
+    toml-0.10.2                |     pyhd3eb1b0_0          20 KB
+    ------------------------------------------------------------
+                                           Total:         442 KB
+
+The following NEW packages will be INSTALLED:
+
+  coverage           pkgs/main/linux-64::coverage-7.6.9-py313h5eee18b_0 
+  pytest-cov         pkgs/main/linux-64::pytest-cov-6.0.0-py313h06a4308_0 
+  toml               pkgs/main/noarch::toml-0.10.2-pyhd3eb1b0_0 
+
+
+
+Downloading and Extracting Packages:
+coverage-7.6.9       | 380 KB    |                                       |   0% 
+pytest-cov-6.0.0     | 43 KB     |                                       |   0% 
+
+toml-0.10.2          | 20 KB     |                                       |   0% 
+
+toml-0.10.2          | 20 KB     | ##################################### | 100% 
+
+toml-0.10.2          | 20 KB     | ##################################### | 100% 
+
+toml-0.10.2          | 20 KB     | ##################################### | 100% 
+pytest-cov-6.0.0     | 43 KB     | #############9                        |  38% 
+pytest-cov-6.0.0     | 43 KB     | ##################################### | 100% 
+                                                                                
+                                                                                
+
+                                                                                
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
 </pre></div>
 </div>
 </div>
@@ -7561,6 +7629,34 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pytest<span class="w"> </span>test_leap.py<span class="w"> </span>--cov<span class="w"> </span>leap
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/bb1000-vt25/bb1000
+plugins: cov-6.0.0, anyio-4.8.0
+collected 7 items                                                              
+
+test_leap.py <span class=" -Color -Color-Green">.......                                                     [100%]</span>
+
+---------- coverage: platform linux, python 3.13.2-final-0 -----------
+Name      Stmts   Miss  Cover
+-----------------------------
+leap.py       4      0   100%
+-----------------------------
+TOTAL         4      0   100%
+
+
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">7 passed</span><span class=" -Color -Color-Green"> in 0.09s ===============================</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="err">!</span>
 </pre></div>
 </div>
 </div>
