@@ -7326,7 +7326,7 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> test_leap.py
-<span class="kn">from</span><span class="w"> </span><span class="nn">leap</span><span class="w"> </span><span class="kn">import</span> <span class="n">leap</span><span class="o">.</span><span class="n">py</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">leap</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_le</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_leap_year</span><span class="p">():</span>
     <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
     <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">1999</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
@@ -7340,6 +7340,69 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing test_leap.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> leap.py
+<span class="k">def</span><span class="w"> </span><span class="nf">is_leap</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns True for leap years</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing leap.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pytest<span class="w"> </span>test_leap.py
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/bb1000-vt25/bb1000
+plugins: anyio-4.8.0
+collected 0 items / 1 error                                                    
+
+==================================== ERRORS ====================================
+<span class=" -Color -Color-Bold -Color-Bold-Red">________________________ ERROR collecting test_leap.py _________________________</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">../miniconda3/envs/bb1000/lib/python3.13/site-packages/_pytest/python.py</span>:493: in importtestmodule
+    mod = import_path(
+<span class=" -Color -Color-Bold -Color-Bold-Red">../miniconda3/envs/bb1000/lib/python3.13/site-packages/_pytest/pathlib.py</span>:587: in import_path
+    importlib.import_module(module_name)
+<span class=" -Color -Color-Bold -Color-Bold-Red">../miniconda3/envs/bb1000/lib/python3.13/importlib/__init__.py</span>:88: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+<span class=" -Color -Color-Bold -Color-Bold-Red">&lt;frozen importlib._bootstrap&gt;</span>:1387: in _gcd_import
+    ???
+<span class=" -Color -Color-Bold -Color-Bold-Red">&lt;frozen importlib._bootstrap&gt;</span>:1360: in _find_and_load
+    ???
+<span class=" -Color -Color-Bold -Color-Bold-Red">&lt;frozen importlib._bootstrap&gt;</span>:1331: in _find_and_load_unlocked
+    ???
+<span class=" -Color -Color-Bold -Color-Bold-Red">&lt;frozen importlib._bootstrap&gt;</span>:935: in _load_unlocked
+    ???
+<span class=" -Color -Color-Bold -Color-Bold-Red">../miniconda3/envs/bb1000/lib/python3.13/site-packages/_pytest/assertion/rewrite.py</span>:176: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+<span class=" -Color -Color-Bold -Color-Bold-Red">../miniconda3/envs/bb1000/lib/python3.13/site-packages/_pytest/assertion/rewrite.py</span>:356: in _rewrite_test
+    tree = ast.parse(source, filename=strfn)
+<span class=" -Color -Color-Bold -Color-Bold-Red">../miniconda3/envs/bb1000/lib/python3.13/ast.py</span>:54: in parse
+    return compile(source, filename, mode, flags,
+<span class=" -Color -Color-Bold -Color-Bold-Red">E     File &quot;/home/bb1000-vt25/bb1000/test_leap.py&quot;, line 1</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E       from leap import leap.py</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E                            ^</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E   SyntaxError: invalid syntax</span>
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
+<span class=" -Color -Color-Red">ERROR</span> test_leap.py
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+<span class=" -Color -Color-Red">=============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 error</span><span class=" -Color -Color-Red"> in 0.49s ===============================</span>
 </pre></div>
 </div>
 </div>
