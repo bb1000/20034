@@ -7262,6 +7262,66 @@ Smith, John
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /home/bb1000-vt25/miniconda3/envs/bb1000/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /home/bb1000-vt25/bb1000
+plugins: anyio-4.8.0
+collected 1 item                                                               
+
+test_my_math.py::test_my_add <span class=" -Color -Color-Red">FAILED                                      [100%]</span>
+
+=================================== FAILURES ===================================
+<span class=" -Color -Color-Bold -Color-Bold-Red">_________________________________ test_my_add __________________________________</span>
+
+    def test_my_add():
+&gt;      assert my_add(1, 1) == 2
+<span class=" -Color -Color-Bold -Color-Bold-Red">E      assert 0 == 2</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E       +  where 0 = my_add(1, 1)</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">test_my_math.py</span>:3: AssertionError
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
+<span class=" -Color -Color-Red">FAILED</span> test_my_math.py::<span class=" -Color -Color-Bold">test_my_add</span> - assert 0 == 2
+<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span><span class=" -Color -Color-Red"> in 0.12s ===============================</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> my_math.py
+<span class="k">def</span><span class="w"> </span><span class="nf">my_add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting my_math.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pytest<span class="w"> </span>-v<span class="w"> </span>test_my_math.py
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /home/bb1000-vt25/miniconda3/envs/bb1000/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /home/bb1000-vt25/bb1000
+plugins: anyio-4.8.0
+collected 1 item                                                               
+
+test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED                                      [100%]</span>
+
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">1 passed</span><span class=" -Color -Color-Green"> in 0.03s ===============================</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 
