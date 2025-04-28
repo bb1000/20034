@@ -7697,7 +7697,7 @@ Coverage HTML written to dir htmlcov
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
@@ -7725,22 +7725,14 @@ Trying:
     is_leap_year(1900)
 Expecting:
     False
-**********************************************************************
-File &quot;/home/bb1000-vt25/bb1000/leap.py&quot;, line 7, in leap.is_leap_year
-Failed example:
-    is_leap_year(1900)
-Expected:
-    False
-Got:
-    True
+ok
 1 item had no tests:
     leap
-<span class=" -Color -Color-Red">**********************************************************************</span>
-1 item had failures:
-   1 of   2 in leap.is_leap_year
+<span class=" -Color -Color-Green">1 item passed all tests:</span>
+ <span class=" -Color -Color-Green">  2 tests in leap.is_leap_year</span>
 2 tests in 2 items.
-<span class=" -Color -Color-Green">1 passed</span> and <span class=" -Color -Color-Red">1 failed</span>.
-<span class=" -Color -Color-Bold -Color-Bold-Red">***Test Failed*** 1 failure</span>.
+<span class=" -Color -Color-Green">2 passed</span>.
+<span class=" -Color -Color-Bold -Color-Bold-Green">Test passed.</span>
 </pre></div>
 </div>
 </div>
