@@ -7448,6 +7448,13 @@ test_leap.py::test_leap_year <span class=" -Color -Color-Green">PASSED          
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cleanup / improve code</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> leap.py
 <span class="k">def</span><span class="w"> </span><span class="nf">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -7463,6 +7470,7 @@ test_leap.py::test_leap_year <span class=" -Color -Color-Green">PASSED          
             <span class="k">return</span> <span class="kc">True</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">return</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
@@ -7580,13 +7588,6 @@ By Olav Vahtras
   
   <div class="footer-item">
     
-
-  <p class="copyright">
-    
-      © Copyright 2023.
-      <br/>
-    
-  </p>
 
   </div>
   
