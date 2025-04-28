@@ -7499,14 +7499,18 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> test_leap.py
 <span class="kn">from</span><span class="w"> </span><span class="nn">leap</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_leap_year</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_leap_year</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">1999</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">1998</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">1996</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">1900</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">1800</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="mi">1600</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+
+
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+    <span class="c1">#assert is_leap_year(1999) == False</span>
+    <span class="c1">##assert is_leap_year(1998) == False</span>
+    <span class="c1">#assert is_leap_year(1996) == True</span>
+    <span class="c1">#assert is_leap_year(1900) == False</span>
+    <span class="c1">#assert is_leap_year(1800) == False</span>
+    <span class="c1">#assert is_leap_year(1600) == True</span>
 </pre></div>
 </div>
 </div>
