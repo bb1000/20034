@@ -7501,15 +7501,43 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 <span class="kn">from</span><span class="w"> </span><span class="nn">leap</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_leap_year</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
 
-<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;year,expected&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="mi">2000</span><span class="p">,</span> <span class="kc">True</span><span class="p">)])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s1">&#39;year,expected&#39;</span><span class="p">,</span> <span class="p">[(</span><span class="mi">2000</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">(</span><span class="mi">1999</span><span class="p">,</span> <span class="kc">False</span><span class="p">)])</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">==</span> <span class="n">ex</span>
+    <span class="k">assert</span> <span class="n">is_leap_year</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">==</span> <span class="n">expected</span>
     <span class="c1">#assert is_leap_year(1999) == False</span>
     <span class="c1">##assert is_leap_year(1998) == False</span>
     <span class="c1">#assert is_leap_year(1996) == True</span>
     <span class="c1">#assert is_leap_year(1900) == False</span>
     <span class="c1">#assert is_leap_year(1800) == False</span>
     <span class="c1">#assert is_leap_year(1600) == True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting test_leap.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pytest<span class="w"> </span>-v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /home/bb1000-vt25/miniconda3/envs/bb1000/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /home/bb1000-vt25/bb1000
+plugins: anyio-4.8.0
+collected 3 items                                                              
+
+test_leap.py::test_leap_year[2000-True] <span class=" -Color -Color-Green">PASSED                           [ 33%]</span>
+test_leap.py::test_leap_year[1999-False] <span class=" -Color -Color-Green">PASSED                          [ 66%]</span>
+test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED                                      [100%]</span>
+
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">3 passed</span><span class=" -Color -Color-Green"> in 0.04s ===============================</span>
 </pre></div>
 </div>
 </div>
