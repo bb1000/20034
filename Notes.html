@@ -7690,12 +7690,42 @@ Coverage HTML written to dir htmlcov
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Returns True for leap years</span>
 
+<span class="sd">    &gt;&gt;&gt; is_leap_year(2000)</span>
+<span class="sd">    True</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting leap.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>-m<span class="w"> </span>doctest<span class="w"> </span>leap.py<span class="w"> </span>-v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying:
+    is_leap_year(2000)
+Expecting:
+    True
+ok
+1 item had no tests:
+    leap
+<span class=" -Color -Color-Green">1 item passed all tests:</span>
+ <span class=" -Color -Color-Green">  1 test in leap.is_leap_year</span>
+1 test in 2 items.
+<span class=" -Color -Color-Green">1 passed</span>.
+<span class=" -Color -Color-Bold -Color-Bold-Green">Test passed.</span>
 </pre></div>
 </div>
 </div>
