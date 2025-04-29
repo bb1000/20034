@@ -7233,11 +7233,13 @@ Smith, John
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> test_my_math.py
 <span class="kn">from</span><span class="w"> </span><span class="nn">my_math</span><span class="w"> </span><span class="kn">import</span> <span class="n">my_add</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pytest</span><span class="w"> </span><span class="kn">import</span> <span class="n">approx</span>
+
 <span class="k">def</span><span class="w"> </span><span class="nf">test_my_add</span><span class="p">():</span>
    <span class="k">assert</span> <span class="n">my_add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">test_my_add_floats</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">my_add</span><span class="p">(</span><span class="mf">.1</span><span class="p">,</span> <span class="mf">.2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">.3</span>
+    <span class="k">assert</span> <span class="n">my_add</span><span class="p">(</span><span class="mf">.1</span><span class="p">,</span> <span class="mf">.2</span><span class="p">)</span> <span class="o">==</span> <span class="n">approx</span><span class="p">(</span><span class="mf">.3</span><span class="p">)</span>
     
 </pre></div>
 </div>
