@@ -8118,6 +8118,359 @@ Date:   Mon May 5 16:04:58 2025 +0200
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new changes to code</span>
+<span class="o">%</span><span class="k">cd</span> git_demo
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/bb1000-vt25/bb1000/git_demo
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	<span class=" -Color -Color-Red">modified:   savings.py</span>
+	<span class=" -Color -Color-Red">modified:   test_savings.py</span>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add all updated files to the cache</span>
+<span class="o">!</span>git<span class="w"> </span>add<span class="w"> </span>-u
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	<span class=" -Color -Color-Green">modified:   savings.py</span>
+	<span class=" -Color -Color-Green">modified:   test_savings.py</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#save changes to repository</span>
+<span class="o">!</span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;Allow for several years of savings&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master 9eb01ff] Allow for several years of savings
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
+nothing to commit, working tree clean
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">commit 9eb01ffd606bfcdee1d700afa3d815aefdcbc0ee (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span>
+Author: Olav Vahtras &lt;vahtras@kth.se&gt;
+Date:   Tue May 6 09:35:10 2025 +0200
+
+    Allow for several years of savings
+
+<span class=" -Color -Color-Yellow">commit 700da30153998d8f23097c36474b8f33d36ad4c5</span>
+Author: Olav Vahtras &lt;vahtras@kth.se&gt;
+Date:   Mon May 5 16:04:58 2025 +0200
+
+    Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">9eb01ff (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new changes</span>
+<span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	<span class=" -Color -Color-Red">modified:   savings.py</span>
+	<span class=" -Color -Color-Red">modified:   test_savings.py</span>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>diff
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">diff --git a/savings.py b/savings.py</span>
+<span class=" -Color -Color-Bold">index 5d92fcc..87b811b 100644</span>
+<span class=" -Color -Color-Bold">--- a/savings.py</span>
+<span class=" -Color -Color-Bold">+++ b/savings.py</span>
+<span class=" -Color -Color-Cyan">@@ -1,5 +1,7 @@</span>
+ # Calculate retirement savings
+ 
+ def savings_calculator(amount, interest, years=1):
+<span class=" -Color -Color-Red">-    final_amount = amount*(1 + interest)**years</span>
+<span class=" -Color -Color-Green">+    final_amount = 0</span>
+<span class=" -Color -Color-Green">+    for year in range(years):</span>
+<span class=" -Color -Color-Green">+        final_amount = (amount + final_amount)*(1 + interest)</span>
+     return final_amount
+\ No newline at end of file
+<span class=" -Color -Color-Bold">diff --git a/test_savings.py b/test_savings.py</span>
+<span class=" -Color -Color-Bold">index f75338c..be1c540 100644</span>
+<span class=" -Color -Color-Bold">--- a/test_savings.py</span>
+<span class=" -Color -Color-Bold">+++ b/test_savings.py</span>
+<span class=" -Color -Color-Cyan">@@ -10,6 +10,8 @@</span> def test_one_year():
+ def test_two_years():
+     initial_amount = 500
+     annual_interest = .05
+<span class=" -Color -Color-Red">-    expected_final = 500*1.05**2</span>
+<span class=" -Color -Color-Green">+    expected_after_1 = 500*1.05</span>
+<span class=" -Color -Color-Green">+    expected_after_2 = (500 + expected_after_1)*1.05</span>
+<span class=" -Color -Color-Green">+    expected_final = expected_after_2</span>
+     calculated_final = savings.savings_calculator(initial_amount, annual_interest, years=2)
+     assert calculated_final == expected_final
+\ No newline at end of file
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>add<span class="w"> </span>-u
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+	<span class=" -Color -Color-Green">modified:   savings.py</span>
+	<span class=" -Color -Color-Green">modified:   test_savings.py</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Annual deposits with for loop&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master 542ba6f] Annual deposits with for loop
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
+nothing to commit, working tree clean
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">commit 542ba6f52b253781fc917c55bbe25df885ac30b6 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span>
+Author: Olav Vahtras &lt;vahtras@kth.se&gt;
+Date:   Tue May 6 09:50:46 2025 +0200
+
+    Annual deposits with for loop
+
+<span class=" -Color -Color-Yellow">commit 9eb01ffd606bfcdee1d700afa3d815aefdcbc0ee</span>
+Author: Olav Vahtras &lt;vahtras@kth.se&gt;
+Date:   Tue May 6 09:35:10 2025 +0200
+
+    Allow for several years of savings
+
+<span class=" -Color -Color-Yellow">commit 700da30153998d8f23097c36474b8f33d36ad4c5</span>
+Author: Olav Vahtras &lt;vahtras@kth.se&gt;
+Date:   Mon May 5 16:04:58 2025 +0200
+
+    Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># have a look at the previous version</span>
+<span class="o">!</span>git<span class="w"> </span>checkout<span class="w"> </span>9eb01ff
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: switching to &#39;9eb01ff&#39;.
+
+You are in &#39;detached HEAD&#39; state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c &lt;new-branch-name&gt;
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 9eb01ff Allow for several years of savings
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">9eb01ff (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>switch<span class="w"> </span>master
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Previous HEAD position was 9eb01ff Allow for several years of savings
+Switched to branch &#39;master&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
