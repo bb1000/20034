@@ -423,6 +423,7 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version control</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branches">Branches</a></li>
 </ul>
 </li>
 </ul>
@@ -8472,6 +8473,293 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 </section>
+<section id="branches">
+<h2>Branches<a class="headerlink" href="#branches" title="Link to this heading">#</a></h2>
+<p>Two lines of development</p>
+<ul class="simple">
+<li><p>a script that runs from the command line</p></li>
+<li><p>variation of the years that I want to deposit</p></li>
+</ul>
+<p>two git branches</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>branch<span class="w"> </span>script
+<span class="o">!</span>git<span class="w"> </span>branch<span class="w"> </span>varying-deposits
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>switch<span class="w"> </span>script
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Switched to branch &#39;script&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>add<span class="w"> </span>-u
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Include command-line arguments&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[script a884958] Include command-line arguments
+ 1 file changed, 22 insertions(+), 2 deletions(-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>switch<span class="w"> </span>varying-deposits
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Switched to branch &#39;varying-deposits&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new changes related to years of depositing</span>
+<span class="o">!</span>git<span class="w"> </span>diff
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">diff --git a/savings.py b/savings.py</span>
+<span class=" -Color -Color-Bold">index 87b811b..c0b0879 100644</span>
+<span class=" -Color -Color-Bold">--- a/savings.py</span>
+<span class=" -Color -Color-Bold">+++ b/savings.py</span>
+<span class=" -Color -Color-Cyan">@@ -1,7 +1,13 @@</span>
+ # Calculate retirement savings
+ 
+<span class=" -Color -Color-Red">-def savings_calculator(amount, interest, years=1):</span>
+<span class=" -Color -Color-Green">+def savings_calculator(amount, interest, years=1, stop_deposit=None):</span>
+     final_amount = 0
+<span class=" -Color -Color-Green">+    if stop_deposit is None:</span>
+<span class=" -Color -Color-Green">+        stop_deposit = years</span>
+<span class=" -Color -Color-Green">+</span><span class=" -Color -Color-BGRed">        </span>
+     for year in range(years):
+<span class=" -Color -Color-Red">-        final_amount = (amount + final_amount)*(1 + interest)</span>
+<span class=" -Color -Color-Green">+        if year &lt; stop_deposit:</span>
+<span class=" -Color -Color-Green">+            final_amount = (amount + final_amount)*(1 + interest)</span>
+<span class=" -Color -Color-Green">+        else:</span>
+<span class=" -Color -Color-Green">+            final_amount = final_amount*(1 + interest)</span>
+     return final_amount
+\ No newline at end of file
+<span class=" -Color -Color-Bold">diff --git a/test_savings.py b/test_savings.py</span>
+<span class=" -Color -Color-Bold">index be1c540..6d9e554 100644</span>
+<span class=" -Color -Color-Bold">--- a/test_savings.py</span>
+<span class=" -Color -Color-Bold">+++ b/test_savings.py</span>
+<span class=" -Color -Color-Cyan">@@ -14,4 +14,13 @@</span> def test_two_years():
+     expected_after_2 = (500 + expected_after_1)*1.05
+     expected_final = expected_after_2
+     calculated_final = savings.savings_calculator(initial_amount, annual_interest, years=2)
+<span class=" -Color -Color-Green">+    assert calculated_final == expected_final</span>
+<span class=" -Color -Color-Green">+</span>
+<span class=" -Color -Color-Green">+def test_two_years_only_inital_deposit():</span>
+<span class=" -Color -Color-Green">+    initial_amount = 500</span>
+<span class=" -Color -Color-Green">+    annual_interest = .05</span>
+<span class=" -Color -Color-Green">+    expected_after_1 = 500*1.05</span>
+<span class=" -Color -Color-Green">+    expected_after_2 = expected_after_1*1.05</span>
+<span class=" -Color -Color-Green">+    expected_final = expected_after_2</span>
+<span class=" -Color -Color-Green">+    calculated_final = savings.savings_calculator(initial_amount, annual_interest, years=2, stop_deposit=1)</span>
+     assert calculated_final == expected_final
+\ No newline at end of file
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>add<span class="w"> </span>-u
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Changes for optional deposit years&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[varying-deposits 25bbab9] Changes for optional deposit years
+ 2 files changed, 17 insertions(+), 2 deletions(-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">25bbab9 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># include changes in script to master</span>
+<span class="o">!</span>git<span class="w"> </span>switch<span class="w"> </span>master
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Switched to branch &#39;master&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>merge<span class="w"> </span>script
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Updating 542ba6f..a884958
+Fast-forward
+ savings.py | 24 <span class=" -Color -Color-Green">++++++++++++++++++++++</span><span class=" -Color -Color-Red">--</span>
+ 1 file changed, 22 insertions(+), 2 deletions(-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">25bbab9 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">542ba6f</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>merge<span class="w"> </span>varying-deposits
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Auto-merging savings.py
+CONFLICT (content): Merge conflict in savings.py
+Automatic merge failed; fix conflicts and then commit the result.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
+
+Changes to be committed:
+	<span class=" -Color -Color-Green">modified:   test_savings.py</span>
+
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+	<span class=" -Color -Color-Red">both modified:   savings.py</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -8568,6 +8856,7 @@ Switched to branch &#39;master&#39;
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version control</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">configuration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branches">Branches</a></li>
 </ul>
 </li>
 </ul>
