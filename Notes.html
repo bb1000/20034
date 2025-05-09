@@ -9022,6 +9022,218 @@ Resolving deltas: 100% (6/6), done.
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /tmp/git_demo
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/git_demo
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># on second computer/ second user</span>
+<span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">85ebcbf (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Define start end stop deposit years
+<span class=" -Color -Color-Yellow">5ee6af4 (</span><span class=" -Color -Color-Bold -Color-Bold-Red">origin/master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Red">origin/HEAD</span><span class=" -Color -Color-Yellow">)</span> fix conflicts
+<span class=" -Color -Color-Yellow">25bbab9</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">a884958</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">542ba6f</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>remote<span class="w"> </span>-v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>origin	git@gits-15.sys.kth.se:BB1000/git_demo (fetch)
+origin	git@gits-15.sys.kth.se:BB1000/git_demo (push)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 400 bytes | 400.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To gits-15.sys.kth.se:BB1000/git_demo
+   5ee6af4..85ebcbf  master -&gt; master
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># back to first computer</span>
+<span class="o">%</span><span class="k">cd</span> ~/bb1000/git_demo
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/bb1000-vt25/bb1000/git_demo
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#update local information</span>
+<span class="c1"># two possibilities: git pull/ git fetch and git merge</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>remote<span class="w"> </span>-v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kth-github	git@gits-15.sys.kth.se:BB1000/git_demo.git (fetch)
+kth-github	git@gits-15.sys.kth.se:BB1000/git_demo.git (push)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">5ee6af4 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Red">kth-github/master</span><span class=" -Color -Color-Yellow">)</span> fix conflicts
+<span class=" -Color -Color-Yellow">25bbab9 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">542ba6f</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>fetch<span class="w"> </span>--all<span class="w"> </span>#<span class="w"> </span>update<span class="w"> </span>our<span class="w"> </span><span class="nb">local</span><span class="w"> </span>information<span class="w"> </span>about<span class="w"> </span>all<span class="w"> </span>remote
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), 380 bytes | 380.00 KiB/s, done.
+From gits-15.sys.kth.se:BB1000/git_demo
+   5ee6af4..85ebcbf  master     -&gt; kth-github/master
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">85ebcbf (</span><span class=" -Color -Color-Bold -Color-Bold-Red">kth-github/master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Red">kth-github/HEAD</span><span class=" -Color -Color-Yellow">)</span> Define start end stop deposit years
+<span class=" -Color -Color-Yellow">5ee6af4 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> fix conflicts
+<span class=" -Color -Color-Yellow">25bbab9 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">542ba6f</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>merge<span class="w"> </span>kth-github/master
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Updating 5ee6af4..85ebcbf
+Fast-forward
+ savings.py | 7 <span class=" -Color -Color-Green">+++++</span><span class=" -Color -Color-Red">--</span>
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">85ebcbf (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Red">kth-github/master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Red">kth-github/HEAD</span><span class=" -Color -Color-Yellow">)</span> Define start end stop deposit years
+<span class=" -Color -Color-Yellow">5ee6af4</span> fix conflicts
+<span class=" -Color -Color-Yellow">25bbab9 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">542ba6f</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># include new updates with git pull</span>
+<span class="o">!</span>git<span class="w"> </span>pull
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 395 bytes | 395.00 KiB/s, done.
+From gits-15.sys.kth.se:BB1000/git_demo
+   85ebcbf..cbce447  master     -&gt; kth-github/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull &lt;remote&gt; &lt;branch&gt;
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=kth-github/&lt;branch&gt; master
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
