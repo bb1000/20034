@@ -425,6 +425,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">configuration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branches">Branches</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-repositories">Remote repositories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-plot-savings-history">update: plot savings history</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics">Advanced topics</a><ul class="visible nav section-nav flex-column">
@@ -9278,6 +9279,63 @@ Fast-forward
 </div>
 </div>
 </section>
+<section id="update-plot-savings-history">
+<h2>update: plot savings history<a class="headerlink" href="#update-plot-savings-history" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %load git_demo/savings.py</span>
+<span class="c1"># Calculate retirement savings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">start_deposit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stop_deposit</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">final_amount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">savings_by_year</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">start_deposit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">start_deposit</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">if</span> <span class="n">stop_deposit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">stop_deposit</span> <span class="o">=</span> <span class="n">years</span>
+        
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">years</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">start_deposit</span> <span class="o">&lt;=</span> <span class="n">year</span> <span class="o">&lt;</span> <span class="n">stop_deposit</span><span class="p">:</span>
+            <span class="n">final_amount</span> <span class="o">=</span> <span class="p">(</span><span class="n">amount</span> <span class="o">+</span> <span class="n">final_amount</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">final_amount</span> <span class="o">=</span> <span class="n">final_amount</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">)</span>
+
+        <span class="n">final_amount</span> <span class="o">=</span>  <span class="nb">round</span><span class="p">(</span><span class="n">final_amount</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="c1">#print(year, final_amount)</span>
+        <span class="n">savings_by_year</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">final_amount</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">plot</span><span class="p">:</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">savings_by_year</span><span class="p">)</span>
+
+        
+    <span class="k">return</span> <span class="n">final_amount</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Compare early career savings vs late career savings (10000 per year)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final</span> <span class="o">=</span> <span class="n">savings_calculator</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">start_deposit</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop_deposit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total deposits&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;, final savings&quot;</span><span class="p">,</span> <span class="n">final</span><span class="p">)</span>
+<span class="n">final</span> <span class="o">=</span> <span class="n">savings_calculator</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">start_deposit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">stop_deposit</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="kc">True</span><span class="p">);</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total deposits&quot;</span><span class="p">,</span> <span class="mi">10000</span><span class="o">*</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;, final savings&quot;</span><span class="p">,</span> <span class="n">final</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total deposits 100000 , final savings 3059084.15
+Total deposits 300000 , final savings 1809434.33
+</pre></div>
+</div>
+<img alt="_images/cb2ee41e9d23172c900c73f64d2d5a83c1aa8bb209cd057f2d528251d71b608f.png" src="_images/cb2ee41e9d23172c900c73f64d2d5a83c1aa8bb209cd057f2d528251d71b608f.png" />
+</div>
+</div>
+<p>Conclusion: the late saver who puts down more money never catches up to the early saver, due to compound intererst over several years</p>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="advanced-topics">
 <h1>Advanced topics<a class="headerlink" href="#advanced-topics" title="Link to this heading">#</a></h1>
@@ -10611,6 +10669,7 @@ Continuing..
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration">configuration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branches">Branches</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-repositories">Remote repositories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-plot-savings-history">update: plot savings history</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics">Advanced topics</a><ul class="visible nav section-nav flex-column">
