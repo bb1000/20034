@@ -411,6 +411,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducing-gapminder-presentation-by-hans-rosling">Reproducing gapminder presentation by Hans Rosling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update">Update</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-numeric-columns">make numeric columns</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a><ul class="visible nav section-nav flex-column">
@@ -447,7 +451,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="notes">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="notes">
 <h1>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h1>
 <p><em>Lecture notes for BB1000 (20034) vt25</em></p>
 </section>
@@ -772,7 +785,7 @@ y: imaginary part</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="s1">&#39;It&#39;</span><span class="n">s</span> <span class="n">time</span> <span class="n">to</span> <span class="n">go</span><span class="s1">&#39;</span>
                     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: unterminated string literal (detected at line 1)
@@ -837,7 +850,7 @@ to go
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">31</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="s2">&quot;It&#39;s time</span>
     <span class="o">^</span>
 <span class="ne">SyntaxError</span>: unterminated string literal (detected at line 1)
@@ -880,7 +893,7 @@ to go
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">77</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="s2">&quot;Hello&quot;</span> <span class="o">*</span> <span class="s2">&quot; world&quot;</span>
 
 <span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;str&#39;
@@ -1816,7 +1829,7 @@ Player player2 has hand [(&#39;diamonds&#39;, 10), (&#39;hearts&#39;, 2)]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Kernel.raw_input of &lt;ipykernel.ipkernel.IPythonKernel object at 0x7480fb3fb620&gt;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;bound method Kernel.raw_input of &lt;ipykernel.ipkernel.IPythonKernel object at 0x71a69fe93620&gt;&gt;
 </pre></div>
 </div>
 </div>
@@ -1828,7 +1841,7 @@ Player player2 has hand [(&#39;diamonds&#39;, 10), (&#39;hearts&#39;, 2)]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;xxx&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hoho&#39;
 </pre></div>
 </div>
 </div>
@@ -2212,7 +2225,7 @@ calculate_hand_value3(
     card_game={<span class=" -Color -Color-Yellow">&#39;player1&#39;</span>: [(<span class=" -Color -Color-Yellow">&#39;spades&#39;</span>, <span class=" -Color -Color-Green">5</span>), (<span class=" -Color -Color-Yellow">&#39;clubs&#39;</span>, <span class=" -Color -Color-Green">4</span>)], <span class=" -Color -Color-Yellow">&#39;player2&#39;</span>: [(<span class=" -Color -Color-Yellow">&#39;diamonds&#39;</span>, <span class=" -Color -Color-Green">10</span>), (<span class=" -Color -Color-Yellow">&#39;hearts&#39;</span>, <span class=" -Color -Color-Green">2</span>)]},
 )
 <span class=" -Color -Color-Red">Docstring:</span> Calculate the value of the hand of player
-<span class=" -Color -Color-Red">File:</span>      /tmp/ipykernel_90890/3892734418.py
+<span class=" -Color -Color-Red">File:</span>      /tmp/ipykernel_1077854/3892734418.py
 <span class=" -Color -Color-Red">Type:</span>      function
 </pre></div>
 </div>
@@ -2257,7 +2270,7 @@ calculate_hand_value3(
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">162</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">120</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">_value</span> <span class="c1"># only defined locally inside the function, not globally</span>
 
 <span class="ne">NameError</span>: name &#39;_value&#39; is not defined
@@ -2622,24 +2635,42 @@ GOODBYE
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 920
--rw-r--r-- 1 bb1000-vt25 bb1000-vt25   5000 apr  8 15:58 data.txt
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   1816 mar 31 16:00 Demo.ipynb
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    280 apr  1 08:49 hello.py
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     14 mar 31 16:46 hello.txt
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    149 mar 31 16:30 mult_table.py
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25      0 apr 14 16:41 newhello.txt
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  85046 apr 14 16:40 Notes.ipynb
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   2750 apr  7 16:21 numbers.txt
--rw-r--r-- 1 bb1000-vt25 bb1000-vt25  41855 apr 11 13:55 numpy-2025-04-11.ipynb
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  21699 apr 11 13:24 numpy-2025-04-11.zip
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     18 apr 14 16:21 omdb.py
--rw-r--r-- 1 bb1000-vt25 bb1000-vt25 425009 apr 14 16:34 pandas-2025-04-11.ipynb
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25 306031 apr 14 15:20 pandas-2025-04-11.zip
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    116 apr  8 09:31 plotdemo.py
-drwxrwxr-x 2 bb1000-vt25 bb1000-vt25   4096 apr 14 16:41 __pycache__
--rw-r--r-- 1 bb1000-vt25 bb1000-vt25   6742 apr 14 14:49 TSLA.csv
--rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     91 mar 18 09:39 untitled.md
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>total 3600
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   15308 maj 16 14:23 advanced-2025-05-16.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  256100 apr 15 08:59 child_mortality_0_5_year_olds_dying_per_1000_born.csv
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25   21434 apr 25 14:03 classes-2025-04-25.ipynb
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25    5000 apr  8 15:58 data.txt
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    1816 mar 31 16:00 Demo.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  298018 apr 15 08:58 gdp_pcap.csv
+drwxrwxr-x 4 bb1000-vt25 bb1000-vt25    4096 maj  9 14:40 git-2025-05-09
+drwxrwxr-x 6 bb1000-vt25 bb1000-vt25    4096 maj 19 16:26 git_demo
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     280 apr  1 08:49 hello.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25      14 mar 31 16:46 hello.txt
+drwxrwxr-x 3 bb1000-vt25 bb1000-vt25    4096 apr 28 16:43 htmlcov
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     241 apr 28 16:52 leap.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     149 mar 31 16:30 mult_table.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25      35 apr 29 09:32 my_math.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25       0 maj 20 10:21 newhello.txt
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25 1332300 maj 20 10:20 Notes.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25    2750 apr 14 16:42 numbers.txt
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25   41855 apr 11 13:55 numpy-2025-04-11.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   21699 apr 11 13:24 numpy-2025-04-11.zip
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25      18 apr 14 16:21 omdb.py
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25  425009 apr 14 16:34 pandas-2025-04-11.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  306031 apr 14 15:20 pandas-2025-04-11.zip
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     116 apr  8 09:31 plotdemo.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  335155 apr 15 09:01 pop.csv
+drwxrwxr-x 2 bb1000-vt25 bb1000-vt25    4096 apr 29 10:42 __pycache__
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25  493778 apr 15 10:21 rosling.png
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25   18244 apr 29 10:53 testing-2025-04-29.ipynb
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     323 apr 28 16:34 test_leap.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     169 apr 29 09:32 test_my_math.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     323 apr 29 10:45 test_timestamps.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     316 apr 29 10:26 timestamps1.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     292 apr 29 10:38 timestamps2.py
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     640 apr 29 09:55 timestamps.py
+-rw-r--r-- 1 bb1000-vt25 bb1000-vt25    6742 apr 14 14:49 TSLA.csv
+-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25     113 apr 29 09:37 untitled.md
 </pre></div>
 </div>
 </div>
@@ -2658,7 +2689,7 @@ drwxrwxr-x 2 bb1000-vt25 bb1000-vt25   4096 apr 14 16:41 __pycache__
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25 11 apr 14 16:41 newhello.txt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-rw-rw-r-- 1 bb1000-vt25 bb1000-vt25 11 maj 20 10:21 newhello.txt
 </pre></div>
 </div>
 </div>
@@ -2984,7 +3015,7 @@ csv.DictReader(
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">209</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">167</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span> <span class="c1"># line will be a dictionary with header values as keys</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="k">break</span>
@@ -3512,7 +3543,7 @@ csv.DictReader(
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">Signature:</span>       numpy.linalg.solve(a, b)
 <span class=" -Color -Color-Red">Call signature:</span>  numpy.linalg.solve(*args, **kwargs)
 <span class=" -Color -Color-Red">Type:</span>            _ArrayFunctionDispatcher
-<span class=" -Color -Color-Red">String form:</span>     &lt;function solve at 0x7480f82de3e0&gt;
+<span class=" -Color -Color-Red">String form:</span>     &lt;function solve at 0x71a69c5f8ea0&gt;
 <span class=" -Color -Color-Red">File:</span>            ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/numpy/linalg/_linalg.py
 <span class=" -Color -Color-Red">Docstring:</span>      
 Solve a linear matrix equation, or system of linear scalar equations.
@@ -3811,7 +3842,7 @@ _implementation : function
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop timing 136.52003264427185
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop timing 118.91819548606873
 </pre></div>
 </div>
 </div>
@@ -3826,7 +3857,7 @@ _implementation : function
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop timing 0.03420901298522949
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loop timing 0.03766798973083496
 </pre></div>
 </div>
 </div>
@@ -3855,7 +3886,7 @@ _implementation : function
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">LinAlgError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">249</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">207</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 
 <span class="nn">File ~/miniconda3/envs/bb1000/lib/python3.13/site-packages/numpy/linalg/_linalg.py:609,</span> in <span class="ni">inv</span><span class="nt">(a)</span>
@@ -4548,7 +4579,7 @@ Name: capital, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_90890/1863415940.py:2: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1077854/1863415940.py:2: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
 You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
 A typical example is when you are setting values in a column of a DataFrame, like:
 
@@ -4559,7 +4590,7 @@ Use `df.loc[row_indexer, &quot;col&quot;] = values` instead, to perform the assi
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
 
   df[&#39;population&#39;][&#39;Belgium&#39;] = 11.4
-/tmp/ipykernel_90890/1863415940.py:2: SettingWithCopyWarning: 
+/tmp/ipykernel_1077854/1863415940.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -5562,7 +5593,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7480c5b88910&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x71a6755d4b90&gt;]
 </pre></div>
 </div>
 <img alt="_images/d77527930ac61e0e73bf3d1c494e4407033d78700ca159a648021c3c0de33fee.png" src="_images/d77527930ac61e0e73bf3d1c494e4407033d78700ca159a648021c3c0de33fee.png" />
@@ -5633,10 +5664,10 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f918884fb10&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x71a5f1dd9f90&gt;]
 </pre></div>
 </div>
-<img alt="_images/ac370fe4e8e6308677c977c2a690893190a58ec789b90cc8ec0c854bf8e77bd0.png" src="_images/ac370fe4e8e6308677c977c2a690893190a58ec789b90cc8ec0c854bf8e77bd0.png" />
+<img alt="_images/d6b751cfeb99dff149a2e55df5f96e9d6e763d50d98d4f4432c794b7c7349f37.png" src="_images/d6b751cfeb99dff149a2e55df5f96e9d6e763d50d98d4f4432c794b7c7349f37.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -5656,7 +5687,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/ac370fe4e8e6308677c977c2a690893190a58ec789b90cc8ec0c854bf8e77bd0.png" src="_images/ac370fe4e8e6308677c977c2a690893190a58ec789b90cc8ec0c854bf8e77bd0.png" />
+<img alt="_images/d6b751cfeb99dff149a2e55df5f96e9d6e763d50d98d4f4432c794b7c7349f37.png" src="_images/d6b751cfeb99dff149a2e55df5f96e9d6e763d50d98d4f4432c794b7c7349f37.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -5688,7 +5719,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "5c8b64f3bdc7495a84947afc28b55fe9", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.sinplot(freq=1.0)&gt;
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "abece418338544a8937e41999c705eb7", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.sinplot(freq=1.0)&gt;
 </pre></div>
 </div>
 </div>
@@ -5702,10 +5733,10 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f9172d8f890&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x71a5f0b6dbd0&gt;]
 </pre></div>
 </div>
-<img alt="_images/3a351d16f70a2e9d376fd2a37039ba4c92627e67e9e56be9344aa60e733ba20b.png" src="_images/3a351d16f70a2e9d376fd2a37039ba4c92627e67e9e56be9344aa60e733ba20b.png" />
+<img alt="_images/e0d84405302c408316b1e64e7c76c83b4344618fff62f16ae415095d7bd7997d.png" src="_images/e0d84405302c408316b1e64e7c76c83b4344618fff62f16ae415095d7bd7997d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -5724,7 +5755,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/3a351d16f70a2e9d376fd2a37039ba4c92627e67e9e56be9344aa60e733ba20b.png" src="_images/3a351d16f70a2e9d376fd2a37039ba4c92627e67e9e56be9344aa60e733ba20b.png" />
+<img alt="_images/e0d84405302c408316b1e64e7c76c83b4344618fff62f16ae415095d7bd7997d.png" src="_images/e0d84405302c408316b1e64e7c76c83b4344618fff62f16ae415095d7bd7997d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -5735,7 +5766,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "d27db412cb9545fba1c4dd729b6b89b2", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.gaussplot(a=1)&gt;
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f838d7dec91f4c938ca3a7fea669c520", "version_major": 2, "version_minor": 0}</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.gaussplot(a=1)&gt;
 </pre></div>
 </div>
 </div>
@@ -5759,7 +5790,7 @@ dtype: object
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;pop.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-<span class="n">pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">pop</span>
 </pre></div>
 </div>
 </div>
@@ -5950,15 +5981,159 @@ dtype: object
       <td>25.9M</td>
       <td>26.1M</td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Samoa</th>
+      <td>47.3k</td>
+      <td>47.3k</td>
+      <td>47.3k</td>
+      <td>47.3k</td>
+      <td>47.3k</td>
+      <td>47.3k</td>
+      <td>47.3k</td>
+      <td>47.2k</td>
+      <td>47.2k</td>
+      <td>47.2k</td>
+      <td>...</td>
+      <td>370k</td>
+      <td>372k</td>
+      <td>374k</td>
+      <td>375k</td>
+      <td>377k</td>
+      <td>378k</td>
+      <td>380k</td>
+      <td>381k</td>
+      <td>382k</td>
+      <td>384k</td>
+    </tr>
+    <tr>
+      <th>Yemen</th>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>2.59M</td>
+      <td>...</td>
+      <td>107M</td>
+      <td>107M</td>
+      <td>107M</td>
+      <td>108M</td>
+      <td>108M</td>
+      <td>109M</td>
+      <td>109M</td>
+      <td>109M</td>
+      <td>110M</td>
+      <td>110M</td>
+    </tr>
+    <tr>
+      <th>South Africa</th>
+      <td>1.45M</td>
+      <td>1.45M</td>
+      <td>1.46M</td>
+      <td>1.46M</td>
+      <td>1.47M</td>
+      <td>1.47M</td>
+      <td>1.48M</td>
+      <td>1.49M</td>
+      <td>1.49M</td>
+      <td>1.5M</td>
+      <td>...</td>
+      <td>92.4M</td>
+      <td>92.6M</td>
+      <td>92.9M</td>
+      <td>93.1M</td>
+      <td>93.3M</td>
+      <td>93.5M</td>
+      <td>93.7M</td>
+      <td>93.9M</td>
+      <td>94.1M</td>
+      <td>94.3M</td>
+    </tr>
+    <tr>
+      <th>Zambia</th>
+      <td>747k</td>
+      <td>758k</td>
+      <td>770k</td>
+      <td>782k</td>
+      <td>794k</td>
+      <td>806k</td>
+      <td>818k</td>
+      <td>831k</td>
+      <td>843k</td>
+      <td>856k</td>
+      <td>...</td>
+      <td>61.1M</td>
+      <td>61.5M</td>
+      <td>61.9M</td>
+      <td>62.3M</td>
+      <td>62.7M</td>
+      <td>63.1M</td>
+      <td>63.4M</td>
+      <td>63.8M</td>
+      <td>64.1M</td>
+      <td>64.5M</td>
+    </tr>
+    <tr>
+      <th>Zimbabwe</th>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>1.09M</td>
+      <td>...</td>
+      <td>36.3M</td>
+      <td>36.4M</td>
+      <td>36.5M</td>
+      <td>36.6M</td>
+      <td>36.7M</td>
+      <td>36.8M</td>
+      <td>36.9M</td>
+      <td>37M</td>
+      <td>37.1M</td>
+      <td>37.2M</td>
+    </tr>
   </tbody>
 </table>
-<p>5 rows × 301 columns</p>
+<p>197 rows × 301 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;gdp_pcap.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-<span class="n">gdp</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">gdp</span>
 </pre></div>
 </div>
 </div>
@@ -6149,15 +6324,159 @@ dtype: object
       <td>92.8k</td>
       <td>92.9k</td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Samoa</th>
+      <td>1600</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>1600</td>
+      <td>...</td>
+      <td>24k</td>
+      <td>24.5k</td>
+      <td>25k</td>
+      <td>25.5k</td>
+      <td>26k</td>
+      <td>26.5k</td>
+      <td>27k</td>
+      <td>27.6k</td>
+      <td>28.1k</td>
+      <td>28.6k</td>
+    </tr>
+    <tr>
+      <th>Yemen</th>
+      <td>1010</td>
+      <td>1010</td>
+      <td>1020</td>
+      <td>1020</td>
+      <td>1020</td>
+      <td>1020</td>
+      <td>1030</td>
+      <td>1030</td>
+      <td>1030</td>
+      <td>1030</td>
+      <td>...</td>
+      <td>6170</td>
+      <td>6320</td>
+      <td>6470</td>
+      <td>6620</td>
+      <td>6780</td>
+      <td>6950</td>
+      <td>7120</td>
+      <td>7290</td>
+      <td>7470</td>
+      <td>7650</td>
+    </tr>
+    <tr>
+      <th>South Africa</th>
+      <td>1750</td>
+      <td>1730</td>
+      <td>1710</td>
+      <td>1690</td>
+      <td>1670</td>
+      <td>1590</td>
+      <td>1590</td>
+      <td>1720</td>
+      <td>1510</td>
+      <td>1470</td>
+      <td>...</td>
+      <td>44.5k</td>
+      <td>45.1k</td>
+      <td>45.7k</td>
+      <td>46.4k</td>
+      <td>47k</td>
+      <td>47.6k</td>
+      <td>48.2k</td>
+      <td>48.8k</td>
+      <td>49.5k</td>
+      <td>50.1k</td>
+    </tr>
+    <tr>
+      <th>Zambia</th>
+      <td>533</td>
+      <td>535</td>
+      <td>536</td>
+      <td>537</td>
+      <td>539</td>
+      <td>539</td>
+      <td>541</td>
+      <td>543</td>
+      <td>543</td>
+      <td>545</td>
+      <td>...</td>
+      <td>16.6k</td>
+      <td>17k</td>
+      <td>17.4k</td>
+      <td>17.8k</td>
+      <td>18.2k</td>
+      <td>18.6k</td>
+      <td>19k</td>
+      <td>19.4k</td>
+      <td>19.9k</td>
+      <td>20.3k</td>
+    </tr>
+    <tr>
+      <th>Zimbabwe</th>
+      <td>919</td>
+      <td>920</td>
+      <td>921</td>
+      <td>922</td>
+      <td>923</td>
+      <td>924</td>
+      <td>925</td>
+      <td>926</td>
+      <td>927</td>
+      <td>928</td>
+      <td>...</td>
+      <td>9840</td>
+      <td>10.1k</td>
+      <td>10.3k</td>
+      <td>10.6k</td>
+      <td>10.8k</td>
+      <td>11.1k</td>
+      <td>11.4k</td>
+      <td>11.6k</td>
+      <td>11.9k</td>
+      <td>12.2k</td>
+    </tr>
   </tbody>
 </table>
-<p>5 rows × 301 columns</p>
+<p>195 rows × 301 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">childm</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;child_mortality_0_5_year_olds_dying_per_1000_born.csv&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)</span>
-<span class="n">childm</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">childm</span>
 </pre></div>
 </div>
 </div>
@@ -6348,9 +6667,153 @@ dtype: object
       <td>2.13</td>
       <td>2.13</td>
     </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Samoa</th>
+      <td>471.0</td>
+      <td>468.0</td>
+      <td>465.0</td>
+      <td>461.0</td>
+      <td>458.0</td>
+      <td>455.0</td>
+      <td>452.0</td>
+      <td>449.0</td>
+      <td>446.0</td>
+      <td>443.0</td>
+      <td>...</td>
+      <td>3.73</td>
+      <td>3.70</td>
+      <td>3.67</td>
+      <td>3.65</td>
+      <td>3.62</td>
+      <td>3.59</td>
+      <td>3.56</td>
+      <td>3.54</td>
+      <td>3.51</td>
+      <td>3.51</td>
+    </tr>
+    <tr>
+      <th>Yemen</th>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>540.0</td>
+      <td>...</td>
+      <td>14.30</td>
+      <td>14.10</td>
+      <td>13.80</td>
+      <td>13.60</td>
+      <td>13.40</td>
+      <td>13.20</td>
+      <td>13.00</td>
+      <td>12.80</td>
+      <td>12.60</td>
+      <td>12.60</td>
+    </tr>
+    <tr>
+      <th>South Africa</th>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>398.0</td>
+      <td>...</td>
+      <td>10.50</td>
+      <td>10.40</td>
+      <td>10.20</td>
+      <td>10.10</td>
+      <td>9.95</td>
+      <td>9.82</td>
+      <td>9.68</td>
+      <td>9.55</td>
+      <td>9.42</td>
+      <td>9.42</td>
+    </tr>
+    <tr>
+      <th>Zambia</th>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>410.0</td>
+      <td>...</td>
+      <td>12.50</td>
+      <td>12.30</td>
+      <td>12.20</td>
+      <td>12.10</td>
+      <td>11.90</td>
+      <td>11.80</td>
+      <td>11.70</td>
+      <td>11.60</td>
+      <td>11.40</td>
+      <td>11.40</td>
+    </tr>
+    <tr>
+      <th>Zimbabwe</th>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>396.0</td>
+      <td>...</td>
+      <td>14.60</td>
+      <td>14.50</td>
+      <td>14.40</td>
+      <td>14.30</td>
+      <td>14.20</td>
+      <td>14.10</td>
+      <td>13.90</td>
+      <td>13.80</td>
+      <td>13.70</td>
+      <td>13.70</td>
+    </tr>
   </tbody>
 </table>
-<p>5 rows × 301 columns</p>
+<p>197 rows × 301 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -6406,10 +6869,10 @@ Name: 1921, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f91706af110&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x71a5e9a5dbd0&gt;
 </pre></div>
 </div>
-<img alt="_images/7400ec3d95b47690ea7de5b2da774d95f8dcefaa13f2b8e3c01e8c6cc1528da3.png" src="_images/7400ec3d95b47690ea7de5b2da774d95f8dcefaa13f2b8e3c01e8c6cc1528da3.png" />
+<img alt="_images/45dd69e084a783cc7afd22df23ff1ca44a8dc0295512b7af8600b7a65908533b.png" src="_images/45dd69e084a783cc7afd22df23ff1ca44a8dc0295512b7af8600b7a65908533b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -6546,9 +7009,642 @@ Name: 1921, dtype: float64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;GDP&#39;, ylabel=&#39;Child mortality&#39;&gt;
 </pre></div>
 </div>
-<img alt="_images/a86823186bfa14296a1166fc8fe4e4b94ae32117f3f347867448b0a6407b9e1c.png" src="_images/a86823186bfa14296a1166fc8fe4e4b94ae32117f3f347867448b0a6407b9e1c.png" />
+<img alt="_images/f12fa89dfa0fe89ade053c744dacb91c5821b314b695ad1a2459c24bda4d3616.png" src="_images/f12fa89dfa0fe89ade053c744dacb91c5821b314b695ad1a2459c24bda4d3616.png" />
 </div>
 </div>
+</section>
+<section id="update">
+<h2>Update<a class="headerlink" href="#update" title="Link to this heading">#</a></h2>
+<section id="make-numeric-columns">
+<h3>make numeric columns<a class="headerlink" href="#make-numeric-columns" title="Link to this heading">#</a></h3>
+<p>How to we translate</p>
+<ul class="simple">
+<li><p>k -&gt; <span class="math notranslate nohighlight">\(10^3\)</span></p></li>
+<li><p>M -&gt; <span class="math notranslate nohighlight">\(10^6\)</span></p></li>
+<li><p>B -&gt; <span class="math notranslate nohighlight">\(10^9\)</span></p></li>
+</ul>
+<p>in a systematic way?</p>
+<p>Consider 3.g. <code class="docutils literal notranslate"><span class="pre">10.6M</span></code> meaning <span class="math notranslate nohighlight">\(10.6*10^6\)</span></p>
+<p>A function that that takes the string and splits off the final character</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">convert</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">factors</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;k&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="o">**</span><span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">}</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="n">factors</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">factors</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="c1"># do nothing</span>
+        <span class="k">return</span> <span class="n">x</span>
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">convert</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="n">convert</span><span class="p">(</span><span class="s1">&#39;3k&#39;</span><span class="p">),</span> <span class="n">convert</span><span class="p">(</span><span class="s1">&#39;4M&#39;</span><span class="p">),</span> <span class="n">convert</span><span class="p">(</span><span class="s1">&#39;1B&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2.0, 3000.0, 4000000.0, 1000000000.0)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The buildin function <code class="docutils literal notranslate"><span class="pre">map</span></code> applies a function on a sequence of values</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="n">convert</span><span class="p">,</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;3k&#39;</span><span class="p">,</span> <span class="s1">&#39;4M&#39;</span><span class="p">,</span> <span class="s1">&#39;1B&#39;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+3000.0
+4000000.0
+1000000000.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>In a similar vein pandas has a map method that is applied to its members</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">convert</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>country
+Afghanistan     10600000.0
+Angola           2910000.0
+Albania           943000.0
+Andorra             5610.0
+UAE                57300.0
+                   ...    
+Samoa              40700.0
+Yemen            3490000.0
+South Africa     7300000.0
+Zambia           1480000.0
+Zimbabwe         1560000.0
+Name: Population, Length: 195, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Apply to and repalce all</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">convert</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>to let the population represent be proportional to the area of a circle in the plot we scale it further with the square root</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GDP</th>
+      <th>Child mortality</th>
+      <th>Population</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>908.0</td>
+      <td>465.0</td>
+      <td>3255.764119</td>
+    </tr>
+    <tr>
+      <th>Angola</th>
+      <td>776.0</td>
+      <td>465.0</td>
+      <td>1705.872211</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>820.0</td>
+      <td>359.0</td>
+      <td>971.081871</td>
+    </tr>
+    <tr>
+      <th>Andorra</th>
+      <td>4870.0</td>
+      <td>NaN</td>
+      <td>74.899933</td>
+    </tr>
+    <tr>
+      <th>UAE</th>
+      <td>2520.0</td>
+      <td>416.0</td>
+      <td>239.374184</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Samoa</th>
+      <td>2430.0</td>
+      <td>204.0</td>
+      <td>201.742410</td>
+    </tr>
+    <tr>
+      <th>Yemen</th>
+      <td>1420.0</td>
+      <td>517.0</td>
+      <td>1868.154169</td>
+    </tr>
+    <tr>
+      <th>South Africa</th>
+      <td>2220.0</td>
+      <td>381.0</td>
+      <td>2701.851217</td>
+    </tr>
+    <tr>
+      <th>Zambia</th>
+      <td>799.0</td>
+      <td>392.0</td>
+      <td>1216.552506</td>
+    </tr>
+    <tr>
+      <th>Zimbabwe</th>
+      <td>731.0</td>
+      <td>379.0</td>
+      <td>1248.999600</td>
+    </tr>
+  </tbody>
+</table>
+<p>195 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fix</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;GDP&#39;, ylabel=&#39;Child mortality&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/29414511ded29bc4df4cd56932cfebaf6f05b100bbac7b281f41fd2a4b330bbe.png" src="_images/29414511ded29bc4df4cd56932cfebaf6f05b100bbac7b281f41fd2a4b330bbe.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># scale some more</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Population&#39;</span><span class="p">]</span> <span class="o">/=</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>GDP</th>
+      <th>Child mortality</th>
+      <th>Population</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>908.0</td>
+      <td>465.0</td>
+      <td>325.576412</td>
+    </tr>
+    <tr>
+      <th>Angola</th>
+      <td>776.0</td>
+      <td>465.0</td>
+      <td>170.587221</td>
+    </tr>
+    <tr>
+      <th>Albania</th>
+      <td>820.0</td>
+      <td>359.0</td>
+      <td>97.108187</td>
+    </tr>
+    <tr>
+      <th>Andorra</th>
+      <td>4870.0</td>
+      <td>NaN</td>
+      <td>7.489993</td>
+    </tr>
+    <tr>
+      <th>UAE</th>
+      <td>2520.0</td>
+      <td>416.0</td>
+      <td>23.937418</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Samoa</th>
+      <td>2430.0</td>
+      <td>204.0</td>
+      <td>20.174241</td>
+    </tr>
+    <tr>
+      <th>Yemen</th>
+      <td>1420.0</td>
+      <td>517.0</td>
+      <td>186.815417</td>
+    </tr>
+    <tr>
+      <th>South Africa</th>
+      <td>2220.0</td>
+      <td>381.0</td>
+      <td>270.185122</td>
+    </tr>
+    <tr>
+      <th>Zambia</th>
+      <td>799.0</td>
+      <td>392.0</td>
+      <td>121.655251</td>
+    </tr>
+    <tr>
+      <th>Zimbabwe</th>
+      <td>731.0</td>
+      <td>379.0</td>
+      <td>124.899960</td>
+    </tr>
+  </tbody>
+</table>
+<p>195 rows × 3 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;GDP&#39;, ylabel=&#39;Child mortality&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/72173f2ebd4b070059048aa28430d7f454a8613fed6342992b88f5f90845b1f4.png" src="_images/72173f2ebd4b070059048aa28430d7f454a8613fed6342992b88f5f90845b1f4.png" />
+</div>
+</div>
+<p>To get some transparency the <code class="docutils literal notranslate"><span class="pre">alpha</span></code> keyword can be used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;GDP&#39;, ylabel=&#39;Child mortality&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/e7f60a58c5860692cf756a505b5600dcb9c361c075f3a490829679462ce7fa7d.png" src="_images/e7f60a58c5860692cf756a505b5600dcb9c361c075f3a490829679462ce7fa7d.png" />
+</div>
+</div>
+<p>The original figure has logarithmic scales</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;GDP&#39;, ylabel=&#39;Child mortality&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/334b825f365b4233ce1aedcde4c7fe292a27859e9a0bb3cd99b8f0ad5ea8e143.png" src="_images/334b825f365b4233ce1aedcde4c7fe292a27859e9a0bb3cd99b8f0ad5ea8e143.png" />
+</div>
+</div>
+<p>Where are we in all this?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Sweden&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;GDP&#39;, ylabel=&#39;Child mortality&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/334b825f365b4233ce1aedcde4c7fe292a27859e9a0bb3cd99b8f0ad5ea8e143.png" src="_images/334b825f365b4233ce1aedcde4c7fe292a27859e9a0bb3cd99b8f0ad5ea8e143.png" />
+<img alt="_images/2624a51c75c593012fb5f84dd9a724b6068c344a1f251b616d9d90f732490512.png" src="_images/2624a51c75c593012fb5f84dd9a724b6068c344a1f251b616d9d90f732490512.png" />
+</div>
+</div>
+<p>As we get more advanced and attach more things it is wise to work with the Axes objects directly</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;GDP&#39;, ylabel=&#39;Child mortality&#39;&gt;
+</pre></div>
+</div>
+<img alt="_images/bb059d69a07dc322fccddde5efcad5c3391caacf5c4d19d4e258476951ad2330.png" src="_images/bb059d69a07dc322fccddde5efcad5c3391caacf5c4d19d4e258476951ad2330.png" />
+</div>
+</div>
+<p>The original has inverted y axis (so that we plot increasing health vs increasing wealth)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b827e2018b54ae07199324d721d87fa225e54493a3e46ce67606a2dfe68a3da1.png" src="_images/b827e2018b54ae07199324d721d87fa225e54493a3e46ce67606a2dfe68a3da1.png" />
+</div>
+</div>
+<p>Set some text labels for the selected countries, and background year</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">country</span><span class="p">,</span> <span class="s1">&#39;GDP&#39;</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">country</span><span class="p">,</span> <span class="s1">&#39;Child mortality&#39;</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.1</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;boxstyle&#39;</span><span class="p">:</span> <span class="s1">&#39;round&#39;</span><span class="p">,</span> <span class="s1">&#39;facecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;wheat&#39;</span><span class="p">})</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="s1">&#39;1921&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.5, &#39;1921&#39;)
+</pre></div>
+</div>
+<img alt="_images/810a9f16e13349710f856436da4106acd46176cc088b10812956b85559362d4b.png" src="_images/810a9f16e13349710f856436da4106acd46176cc088b10812956b85559362d4b.png" />
+</div>
+</div>
+<p>Set values on the axis for the selected countries</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">country</span><span class="p">,</span> <span class="s1">&#39;GDP&#39;</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">country</span><span class="p">,</span> <span class="s1">&#39;Child mortality&#39;</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.1</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;boxstyle&#39;</span><span class="p">:</span> <span class="s1">&#39;round&#39;</span><span class="p">,</span> <span class="s1">&#39;facecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;wheat&#39;</span><span class="p">})</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="s1">&#39;1921&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;GDP&#39;</span><span class="p">],</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;GDP&#39;</span><span class="p">]],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;Child mortality&#39;</span><span class="p">],</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;Child mortality&#39;</span><span class="p">]])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1fcbe1850a70b61b95bafab0dde466839dd55e396daeb371f886159d4659f4eb.png" src="_images/1fcbe1850a70b61b95bafab0dde466839dd55e396daeb371f886159d4659f4eb.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Finally</span> <span class="n">we</span> <span class="n">put</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">historical</span> <span class="n">perspective</span> <span class="n">so</span> <span class="n">that</span> <span class="nb">all</span> <span class="n">years</span> <span class="n">fit</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">graph</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">selected</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sweden&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;GDP&#39;</span><span class="p">,</span> 
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Child mortality&#39;</span><span class="p">,</span> 
+    <span class="n">s</span><span class="o">=</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">logx</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">logy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span>
+<span class="p">)</span>
+
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">selected</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">country</span><span class="p">,</span> <span class="s1">&#39;GDP&#39;</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">country</span><span class="p">,</span> <span class="s1">&#39;Child mortality&#39;</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.1</span><span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;boxstyle&#39;</span><span class="p">:</span> <span class="s1">&#39;round&#39;</span><span class="p">,</span> <span class="s1">&#39;facecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;wheat&#39;</span><span class="p">})</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">.5</span><span class="p">,</span> <span class="s1">&#39;1921&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;GDP&#39;</span><span class="p">],</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;GDP&#39;</span><span class="p">]],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;Child mortality&#39;</span><span class="p">],</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selected</span><span class="p">,</span> <span class="s1">&#39;Child mortality&#39;</span><span class="p">]])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">x_min</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">convert</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">x_max</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">convert</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">y_min</span> <span class="o">=</span> <span class="n">childm</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">convert</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="n">childm</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">convert</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/f379e78911e9789f27dcb2a6126d728335cc3d43868723518ddc2bd9de6b8302.png" src="_images/f379e78911e9789f27dcb2a6126d728335cc3d43868723518ddc2bd9de6b8302.png" />
+</div>
+</div>
+<p>Challenges:</p>
+<ul class="simple">
+<li><p>Make a movie of frames</p></li>
+<li><p>Make a slider for the chosen year</p></li>
+</ul>
+</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="classes">
@@ -6587,7 +7683,7 @@ Name: 1921, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;HELLO WORLD!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\nImplies that there is a upper method in the str class\n\nclass str:\n     def upper(self):\n         returns a new string replacing lower with upper case\n\n&#39;
 </pre></div>
 </div>
 </div>
@@ -7235,7 +8331,7 @@ Smith, John
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">71</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">460</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">assert</span> <span class="kc">False</span>
 
 <span class="ne">AssertionError</span>: 
@@ -7318,7 +8414,7 @@ test_my_math.py::test_my_add_floats <span class=" -Color -Color-Red">FAILED     
 <span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
 <span class=" -Color -Color-Red">FAILED</span> test_my_math.py::<span class=" -Color -Color-Bold">test_my_add</span> - assert 0 == 2
 <span class=" -Color -Color-Red">FAILED</span> test_my_math.py::<span class=" -Color -Color-Bold">test_my_add_floats</span> - assert -0.1 == 0.3 ± 3.0e-07
-<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">2 failed</span><span class=" -Color -Color-Red"> in 0.16s ===============================</span>
+<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">2 failed</span><span class=" -Color -Color-Red"> in 0.08s ===============================</span>
 </pre></div>
 </div>
 </div>
@@ -7354,7 +8450,7 @@ collected 2 items
 test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED                                      [ 50%]</span>
 test_my_math.py::test_my_add_floats <span class=" -Color -Color-Green">PASSED                               [100%]</span>
 
-<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">2 passed</span><span class=" -Color -Color-Green"> in 0.03s ===============================</span>
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">2 passed</span><span class=" -Color -Color-Green"> in 0.02s ===============================</span>
 </pre></div>
 </div>
 </div>
@@ -7410,7 +8506,7 @@ test_my_math.py::test_my_add_floats <span class=" -Color -Color-Green">PASSED   
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">============================= test session starts ==============================</span>
 platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
 rootdir: /home/bb1000-vt25/bb1000
-plugins: anyio-4.8.0
+plugins: cov-6.0.0, anyio-4.8.0
 collected 1 item                                                               
 
 test_leap.py <span class=" -Color -Color-Red">F                                                           [100%]</span>
@@ -7430,7 +8526,7 @@ test_leap.py <span class=" -Color -Color-Red">F                                 
 <span class=" -Color -Color-Bold -Color-Bold-Red">test_leap.py</span>:7: AssertionError
 <span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
 <span class=" -Color -Color-Red">FAILED</span> test_leap.py::<span class=" -Color -Color-Bold">test_leap_year</span> - assert True == False
-<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span><span class=" -Color -Color-Red"> in 0.10s ===============================</span>
+<span class=" -Color -Color-Red">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span><span class=" -Color -Color-Red"> in 0.07s ===============================</span>
 </pre></div>
 </div>
 </div>
@@ -7472,12 +8568,12 @@ test_leap.py <span class=" -Color -Color-Red">F                                 
 platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /home/bb1000-vt25/miniconda3/envs/bb1000/bin/python3.13
 cachedir: .pytest_cache
 rootdir: /home/bb1000-vt25/bb1000
-plugins: anyio-4.8.0
+plugins: cov-6.0.0, anyio-4.8.0
 collected 1 item                                                               
 
 test_leap.py::test_leap_year <span class=" -Color -Color-Green">PASSED                                      [100%]</span>
 
-<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">1 passed</span><span class=" -Color -Color-Green"> in 0.03s ===============================</span>
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">1 passed</span><span class=" -Color -Color-Green"> in 0.02s ===============================</span>
 </pre></div>
 </div>
 </div>
@@ -7520,13 +8616,33 @@ test_leap.py::test_leap_year <span class=" -Color -Color-Green">PASSED          
 platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /home/bb1000-vt25/miniconda3/envs/bb1000/bin/python3.13
 cachedir: .pytest_cache
 rootdir: /home/bb1000-vt25/bb1000
-plugins: anyio-4.8.0
-collected 2 items                                                              
+plugins: cov-6.0.0, anyio-4.8.0
+collected 8 items                                                              
 
+git_demo/test_savings.py::test_one_year <span class=" -Color -Color-Green">PASSED                           [ 12%]</span>
+git_demo/test_savings.py::test_two_years <span class=" -Color -Color-Green">PASSED                          [ 25%]</span>
+git_demo/test_savings.py::test_two_years_only_inital_deposit <span class=" -Color -Color-Green">PASSED      [ 37%]</span>
 test_leap.py::test_leap_year <span class=" -Color -Color-Green">PASSED                                      [ 50%]</span>
-test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED                                      [100%]</span>
+test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED                                      [ 62%]</span>
+test_my_math.py::test_my_add_floats <span class=" -Color -Color-Green">PASSED                               [ 75%]</span>
+test_timestamps.py::test_1 <span class=" -Color -Color-Green">PASSED                                        [ 87%]</span>
+test_timestamps.py::test_6 <span class=" -Color -Color-Red">FAILED                                        [100%]</span>
 
-<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">2 passed</span><span class=" -Color -Color-Green"> in 0.03s ===============================</span>
+=================================== FAILURES ===================================
+<span class=" -Color -Color-Bold -Color-Bold-Red">____________________________________ test_6 ____________________________________</span>
+
+    def test_6():
+        <span class=" -Color -Color-Yellow">&quot;&quot;&quot;</span>
+    <span class=" -Color -Color-Yellow">    &gt;&gt;&gt; sum_timestamps([&#39;6:35:32&#39;, &#39;2:45:48&#39;, &#39;40:10&#39;])</span>
+    <span class=" -Color -Color-Yellow">    &#39;10:01:30&#39;</span>
+    <span class=" -Color -Color-Yellow">    &quot;&quot;&quot;</span>
+&gt;       assert timestamps([<span class=" -Color -Color-Yellow">&#39;6:35:32&#39;</span>, <span class=" -Color -Color-Yellow">&#39;2:45:48&#39;</span>, <span class=" -Color -Color-Yellow">&#39;40:10&#39;</span>]) == <span class=" -Color -Color-Yellow">&#39;10:01:30&#39;</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E       TypeError: &#39;module&#39; object is not callable</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">test_timestamps.py</span>:13: TypeError
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
+<span class=" -Color -Color-Red">FAILED</span> test_timestamps.py::<span class=" -Color -Color-Bold">test_6</span> - TypeError: &#39;module&#39; object is not callable
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">7 passed</span><span class=" -Color -Color-Red"> in 0.54s ==========================</span>
 </pre></div>
 </div>
 </div>
@@ -7570,19 +8686,39 @@ test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED          
 platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0 -- /home/bb1000-vt25/miniconda3/envs/bb1000/bin/python3.13
 cachedir: .pytest_cache
 rootdir: /home/bb1000-vt25/bb1000
-plugins: anyio-4.8.0
-collected 8 items                                                              
+plugins: cov-6.0.0, anyio-4.8.0
+collected 14 items                                                             
 
-test_leap.py::test_leap_year[2000-True] <span class=" -Color -Color-Green">PASSED                           [ 12%]</span>
-test_leap.py::test_leap_year[1999-False] <span class=" -Color -Color-Green">PASSED                          [ 25%]</span>
-test_leap.py::test_leap_year[1998-False] <span class=" -Color -Color-Green">PASSED                          [ 37%]</span>
+git_demo/test_savings.py::test_one_year <span class=" -Color -Color-Green">PASSED                           [  7%]</span>
+git_demo/test_savings.py::test_two_years <span class=" -Color -Color-Green">PASSED                          [ 14%]</span>
+git_demo/test_savings.py::test_two_years_only_inital_deposit <span class=" -Color -Color-Green">PASSED      [ 21%]</span>
+test_leap.py::test_leap_year[2000-True] <span class=" -Color -Color-Green">PASSED                           [ 28%]</span>
+test_leap.py::test_leap_year[1999-False] <span class=" -Color -Color-Green">PASSED                          [ 35%]</span>
+test_leap.py::test_leap_year[1998-False] <span class=" -Color -Color-Green">PASSED                          [ 42%]</span>
 test_leap.py::test_leap_year[1996-True] <span class=" -Color -Color-Green">PASSED                           [ 50%]</span>
-test_leap.py::test_leap_year[1900-False] <span class=" -Color -Color-Green">PASSED                          [ 62%]</span>
-test_leap.py::test_leap_year[1800-False] <span class=" -Color -Color-Green">PASSED                          [ 75%]</span>
-test_leap.py::test_leap_year[1600-True] <span class=" -Color -Color-Green">PASSED                           [ 87%]</span>
-test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED                                      [100%]</span>
+test_leap.py::test_leap_year[1900-False] <span class=" -Color -Color-Green">PASSED                          [ 57%]</span>
+test_leap.py::test_leap_year[1800-False] <span class=" -Color -Color-Green">PASSED                          [ 64%]</span>
+test_leap.py::test_leap_year[1600-True] <span class=" -Color -Color-Green">PASSED                           [ 71%]</span>
+test_my_math.py::test_my_add <span class=" -Color -Color-Green">PASSED                                      [ 78%]</span>
+test_my_math.py::test_my_add_floats <span class=" -Color -Color-Green">PASSED                               [ 85%]</span>
+test_timestamps.py::test_1 <span class=" -Color -Color-Green">PASSED                                        [ 92%]</span>
+test_timestamps.py::test_6 <span class=" -Color -Color-Red">FAILED                                        [100%]</span>
 
-<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">8 passed</span><span class=" -Color -Color-Green"> in 0.04s ===============================</span>
+=================================== FAILURES ===================================
+<span class=" -Color -Color-Bold -Color-Bold-Red">____________________________________ test_6 ____________________________________</span>
+
+    def test_6():
+        <span class=" -Color -Color-Yellow">&quot;&quot;&quot;</span>
+    <span class=" -Color -Color-Yellow">    &gt;&gt;&gt; sum_timestamps([&#39;6:35:32&#39;, &#39;2:45:48&#39;, &#39;40:10&#39;])</span>
+    <span class=" -Color -Color-Yellow">    &#39;10:01:30&#39;</span>
+    <span class=" -Color -Color-Yellow">    &quot;&quot;&quot;</span>
+&gt;       assert timestamps([<span class=" -Color -Color-Yellow">&#39;6:35:32&#39;</span>, <span class=" -Color -Color-Yellow">&#39;2:45:48&#39;</span>, <span class=" -Color -Color-Yellow">&#39;40:10&#39;</span>]) == <span class=" -Color -Color-Yellow">&#39;10:01:30&#39;</span>
+<span class=" -Color -Color-Bold -Color-Bold-Red">E       TypeError: &#39;module&#39; object is not callable</span>
+
+<span class=" -Color -Color-Bold -Color-Bold-Red">test_timestamps.py</span>:13: TypeError
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">=========================== short test summary info ============================</span>
+<span class=" -Color -Color-Red">FAILED</span> test_timestamps.py::<span class=" -Color -Color-Bold">test_6</span> - TypeError: &#39;module&#39; object is not callable
+<span class=" -Color -Color-Red">========================= </span><span class=" -Color -Color-Bold -Color-Bold-Red">1 failed</span>, <span class=" -Color -Color-Green">13 passed</span><span class=" -Color -Color-Red"> in 0.47s =========================</span>
 </pre></div>
 </div>
 </div>
@@ -7612,52 +8748,7 @@ Please update conda by running
 
 
 
-## Package Plan ##
-
-  environment location: /home/bb1000-vt25/miniconda3/envs/bb1000
-
-  added / updated specs:
-    - pytest-cov
-
-
-The following packages will be downloaded:
-
-    package                    |            build
-    ---------------------------|-----------------
-    coverage-7.6.9             |  py313h5eee18b_0         380 KB
-    pytest-cov-6.0.0           |  py313h06a4308_0          43 KB
-    toml-0.10.2                |     pyhd3eb1b0_0          20 KB
-    ------------------------------------------------------------
-                                           Total:         442 KB
-
-The following NEW packages will be INSTALLED:
-
-  coverage           pkgs/main/linux-64::coverage-7.6.9-py313h5eee18b_0 
-  pytest-cov         pkgs/main/linux-64::pytest-cov-6.0.0-py313h06a4308_0 
-  toml               pkgs/main/noarch::toml-0.10.2-pyhd3eb1b0_0 
-
-
-
-Downloading and Extracting Packages:
-coverage-7.6.9       | 380 KB    |                                       |   0% 
-pytest-cov-6.0.0     | 43 KB     |                                       |   0% 
-
-toml-0.10.2          | 20 KB     |                                       |   0% 
-
-toml-0.10.2          | 20 KB     | ##################################### | 100% 
-
-toml-0.10.2          | 20 KB     | ##################################### | 100% 
-
-toml-0.10.2          | 20 KB     | ##################################### | 100% 
-pytest-cov-6.0.0     | 43 KB     | #############9                        |  38% 
-pytest-cov-6.0.0     | 43 KB     | ##################################### | 100% 
-                                                                                
-                                                                                
-
-                                                                                
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
+# All requested packages already installed.
 </pre></div>
 </div>
 </div>
@@ -7685,7 +8776,7 @@ leap.py       4      0   100%
 TOTAL         4      0   100%
 
 
-<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">7 passed</span><span class=" -Color -Color-Green"> in 0.09s ===============================</span>
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">7 passed</span><span class=" -Color -Color-Green"> in 0.06s ===============================</span>
 </pre></div>
 </div>
 </div>
@@ -7709,7 +8800,7 @@ test_leap.py <span class=" -Color -Color-Green">.......                         
 Coverage HTML written to dir htmlcov
 
 
-<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">7 passed</span><span class=" -Color -Color-Green"> in 0.10s ===============================</span>
+<span class=" -Color -Color-Green">============================== </span><span class=" -Color -Color-Bold -Color-Bold-Green">7 passed</span><span class=" -Color -Color-Green"> in 0.09s ===============================</span>
 </pre></div>
 </div>
 </div>
@@ -7780,7 +8871,7 @@ ok
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">143</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">481</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
     <span class="o">^</span>
 <span class="ne">IndentationError</span>: unexpected indent
@@ -7912,7 +9003,7 @@ See &#39;git help git&#39; for an overview of the system.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pwd
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> ~/bb1000
 </pre></div>
 </div>
 </div>
@@ -7924,19 +9015,8 @@ See &#39;git help git&#39; for an overview of the system.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> git_demo/
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/bb1000-vt25/bb1000/git_demo
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pwd
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">mkdir</span> git_demo
+<span class="o">%</span><span class="k">cd</span> git_demo/
 </pre></div>
 </div>
 </div>
@@ -8000,7 +9080,50 @@ nothing to commit (create/copy files and use &quot;git add&quot; to track)
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># work...</span>
-<span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> savings.py
+<span class="c1"># Calculate retirement savings</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">):</span>
+    <span class="n">final_amount</span> <span class="o">=</span> <span class="n">amount</span> <span class="o">+</span> <span class="n">amount</span><span class="o">*</span><span class="n">interest</span>
+    <span class="k">return</span> <span class="n">final_amount</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting savings.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> test_savings.py
+<span class="kn">import</span><span class="w"> </span><span class="nn">savings</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_one_year</span><span class="p">():</span>
+    <span class="n">initial_amount</span> <span class="o">=</span> <span class="mi">500</span>
+    <span class="n">annual_interest</span> <span class="o">=</span> <span class="mf">.05</span>
+    <span class="n">expected_final</span> <span class="o">=</span> <span class="mi">525</span>
+    <span class="n">calculated_final</span> <span class="o">=</span> <span class="n">savings</span><span class="o">.</span><span class="n">savings_calculator</span><span class="p">(</span><span class="n">initial_amount</span><span class="p">,</span> <span class="n">annual_interest</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">calculated_final</span> <span class="o">==</span> <span class="n">expected_final</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting test_savings.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>status
 </pre></div>
 </div>
 </div>
@@ -8011,7 +9134,7 @@ No commits yet
 
 Untracked files:
   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
-	<span class=" -Color -Color-Red">.ipynb_checkpoints/</span>
+	<span class=" -Color -Color-Red">__pycache__/</span>
 	<span class=" -Color -Color-Red">savings.py</span>
 	<span class=" -Color -Color-Red">test_savings.py</span>
 
@@ -8023,12 +9146,19 @@ nothing added to commit but untracked files present (use &quot;git add&quot; to 
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create .gitignore file to list files to ignore</span>
-<span class="o">!</span>cat<span class="w"> </span>.gitignore
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> .gitignore
+<span class="o">*.</span><span class="n">pyc</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.ipynb_checkpoints
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Writing .gitignore
 </pre></div>
 </div>
 </div>
@@ -8090,8 +9220,8 @@ Changes to be committed:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master (root-commit) 700da30] Initial commit
- 3 files changed, 16 insertions(+)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master (root-commit) a324f3f] Initial commit
+ 3 files changed, 14 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 savings.py
  create mode 100644 test_savings.py
@@ -8119,9 +9249,9 @@ nothing to commit, working tree clean
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">commit 700da30153998d8f23097c36474b8f33d36ad4c5 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">commit a324f3f127df2eb866b3f870901ab0c91baf41ff (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span>
 Author: Olav Vahtras &lt;vahtras@kth.se&gt;
-Date:   Mon May 5 16:04:58 2025 +0200
+Date:   Tue May 20 21:50:43 2025 +0200
 
     Initial commit
 </pre></div>
@@ -8131,12 +9261,23 @@ Date:   Mon May 5 16:04:58 2025 +0200
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new changes to code</span>
-<span class="o">%</span><span class="k">cd</span> git_demo
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> savings.py
+<span class="c1"># Calculate retirement savings</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">final_amount</span> <span class="o">=</span> <span class="n">amount</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">)</span><span class="o">**</span><span class="n">years</span>
+    <span class="k">return</span> <span class="n">final_amount</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/bb1000-vt25/bb1000/git_demo
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting savings.py
 </pre></div>
 </div>
 </div>
@@ -8153,7 +9294,6 @@ Changes not staged for commit:
   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
   (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
 	<span class=" -Color -Color-Red">modified:   savings.py</span>
-	<span class=" -Color -Color-Red">modified:   test_savings.py</span>
 
 no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
 </pre></div>
@@ -8179,7 +9319,6 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 Changes to be committed:
   (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
 	<span class=" -Color -Color-Green">modified:   savings.py</span>
-	<span class=" -Color -Color-Green">modified:   test_savings.py</span>
 </pre></div>
 </div>
 </div>
@@ -8192,8 +9331,8 @@ Changes to be committed:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master 9eb01ff] Allow for several years of savings
- 2 files changed, 9 insertions(+), 2 deletions(-)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master 0075416] Allow for several years of savings
+ 1 file changed, 3 insertions(+), 3 deletions(-)
 </pre></div>
 </div>
 </div>
@@ -8218,15 +9357,15 @@ nothing to commit, working tree clean
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">commit 9eb01ffd606bfcdee1d700afa3d815aefdcbc0ee (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">commit 0075416fafd7a9f5432bfb9bcd0b7461221215ce (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span>
 Author: Olav Vahtras &lt;vahtras@kth.se&gt;
-Date:   Tue May 6 09:35:10 2025 +0200
+Date:   Tue May 20 21:55:23 2025 +0200
 
     Allow for several years of savings
 
-<span class=" -Color -Color-Yellow">commit 700da30153998d8f23097c36474b8f33d36ad4c5</span>
+<span class=" -Color -Color-Yellow">commit a324f3f127df2eb866b3f870901ab0c91baf41ff</span>
 Author: Olav Vahtras &lt;vahtras@kth.se&gt;
-Date:   Mon May 5 16:04:58 2025 +0200
+Date:   Tue May 20 21:50:43 2025 +0200
 
     Initial commit
 </pre></div>
@@ -8240,8 +9379,8 @@ Date:   Mon May 5 16:04:58 2025 +0200
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">9eb01ff (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">0075416 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8249,7 +9388,32 @@ Date:   Mon May 5 16:04:58 2025 +0200
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new changes</span>
-<span class="o">!</span>git<span class="w"> </span>status
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> savings.py
+<span class="c1"># Calculate retirement savings</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">final_amount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">years</span><span class="p">):</span>
+        <span class="n">final_amount</span> <span class="o">=</span> <span class="p">(</span><span class="n">amount</span> <span class="o">+</span> <span class="n">final_amount</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">final_amount</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting savings.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>status
 </pre></div>
 </div>
 </div>
@@ -8259,7 +9423,6 @@ Changes not staged for commit:
   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
   (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
 	<span class=" -Color -Color-Red">modified:   savings.py</span>
-	<span class=" -Color -Color-Red">modified:   test_savings.py</span>
 
 no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
 </pre></div>
@@ -8274,7 +9437,7 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">diff --git a/savings.py b/savings.py</span>
-<span class=" -Color -Color-Bold">index 5d92fcc..87b811b 100644</span>
+<span class=" -Color -Color-Bold">index 715f219..46443a6 100644</span>
 <span class=" -Color -Color-Bold">--- a/savings.py</span>
 <span class=" -Color -Color-Bold">+++ b/savings.py</span>
 <span class=" -Color -Color-Cyan">@@ -1,5 +1,7 @@</span>
@@ -8282,26 +9445,11 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
  
  def savings_calculator(amount, interest, years=1):
 <span class=" -Color -Color-Red">-    final_amount = amount*(1 + interest)**years</span>
+<span class=" -Color -Color-Red">-    return final_amount(bb1000) bb1000-vt25@bat:~/bb1000/git_demo_backup$ </span>
 <span class=" -Color -Color-Green">+    final_amount = 0</span>
 <span class=" -Color -Color-Green">+    for year in range(years):</span>
 <span class=" -Color -Color-Green">+        final_amount = (amount + final_amount)*(1 + interest)</span>
-     return final_amount
-\ No newline at end of file
-<span class=" -Color -Color-Bold">diff --git a/test_savings.py b/test_savings.py</span>
-<span class=" -Color -Color-Bold">index f75338c..be1c540 100644</span>
-<span class=" -Color -Color-Bold">--- a/test_savings.py</span>
-<span class=" -Color -Color-Bold">+++ b/test_savings.py</span>
-<span class=" -Color -Color-Cyan">@@ -10,6 +10,8 @@</span> def test_one_year():
- def test_two_years():
-     initial_amount = 500
-     annual_interest = .05
-<span class=" -Color -Color-Red">-    expected_final = 500*1.05**2</span>
-<span class=" -Color -Color-Green">+    expected_after_1 = 500*1.05</span>
-<span class=" -Color -Color-Green">+    expected_after_2 = (500 + expected_after_1)*1.05</span>
-<span class=" -Color -Color-Green">+    expected_final = expected_after_2</span>
-     calculated_final = savings.savings_calculator(initial_amount, annual_interest, years=2)
-     assert calculated_final == expected_final
-\ No newline at end of file
+<span class=" -Color -Color-Green">+    return final_amount</span>
 </pre></div>
 </div>
 </div>
@@ -8324,7 +9472,6 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 Changes to be committed:
   (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
 	<span class=" -Color -Color-Green">modified:   savings.py</span>
-	<span class=" -Color -Color-Green">modified:   test_savings.py</span>
 </pre></div>
 </div>
 </div>
@@ -8336,8 +9483,8 @@ Changes to be committed:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master 542ba6f] Annual deposits with for loop
- 2 files changed, 6 insertions(+), 2 deletions(-)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master ea52645] Annual deposits with for loop
+ 1 file changed, 4 insertions(+), 2 deletions(-)
 </pre></div>
 </div>
 </div>
@@ -8362,21 +9509,21 @@ nothing to commit, working tree clean
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">commit 542ba6f52b253781fc917c55bbe25df885ac30b6 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">commit ea526456f52d4a6e361f46ec799a7748ea257469 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span>
 Author: Olav Vahtras &lt;vahtras@kth.se&gt;
-Date:   Tue May 6 09:50:46 2025 +0200
+Date:   Tue May 20 22:00:38 2025 +0200
 
     Annual deposits with for loop
 
-<span class=" -Color -Color-Yellow">commit 9eb01ffd606bfcdee1d700afa3d815aefdcbc0ee</span>
+<span class=" -Color -Color-Yellow">commit 0075416fafd7a9f5432bfb9bcd0b7461221215ce</span>
 Author: Olav Vahtras &lt;vahtras@kth.se&gt;
-Date:   Tue May 6 09:35:10 2025 +0200
+Date:   Tue May 20 21:55:23 2025 +0200
 
     Allow for several years of savings
 
-<span class=" -Color -Color-Yellow">commit 700da30153998d8f23097c36474b8f33d36ad4c5</span>
+<span class=" -Color -Color-Yellow">commit a324f3f127df2eb866b3f870901ab0c91baf41ff</span>
 Author: Olav Vahtras &lt;vahtras@kth.se&gt;
-Date:   Mon May 5 16:04:58 2025 +0200
+Date:   Tue May 20 21:50:43 2025 +0200
 
     Initial commit
 </pre></div>
@@ -8390,9 +9537,9 @@ Date:   Mon May 5 16:04:58 2025 +0200
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">ea52645 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8400,12 +9547,12 @@ Date:   Mon May 5 16:04:58 2025 +0200
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># have a look at the previous version</span>
-<span class="o">!</span>git<span class="w"> </span>checkout<span class="w"> </span>9eb01ff
+<span class="o">!</span>git<span class="w"> </span>checkout<span class="w"> </span><span class="m">0075416</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: switching to &#39;9eb01ff&#39;.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: switching to &#39;0075416&#39;.
 
 You are in &#39;detached HEAD&#39; state. You can look around, make experimental
 changes and commit them, and you can discard any commits you make in this
@@ -8422,7 +9569,7 @@ Or undo this operation with:
 
 Turn off this advice by setting config variable advice.detachedHead to false
 
-HEAD is now at 9eb01ff Allow for several years of savings
+HEAD is now at 0075416 Allow for several years of savings
 </pre></div>
 </div>
 </div>
@@ -8434,8 +9581,8 @@ HEAD is now at 9eb01ff Allow for several years of savings
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">9eb01ff (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">0075416 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8447,9 +9594,9 @@ HEAD is now at 9eb01ff Allow for several years of savings
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">ea52645 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow">)</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8461,7 +9608,7 @@ HEAD is now at 9eb01ff Allow for several years of savings
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Previous HEAD position was 9eb01ff Allow for several years of savings
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Previous HEAD position was 0075416 Allow for several years of savings
 Switched to branch &#39;master&#39;
 </pre></div>
 </div>
@@ -8474,9 +9621,9 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">ea52645 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8505,9 +9652,9 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">ea52645 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8531,9 +9678,46 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">ea52645 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> savings.py
+<span class="c1"># Calculate retirement savings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">final_amount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">years</span><span class="p">):</span>
+        <span class="n">final_amount</span> <span class="o">=</span> <span class="nb">round</span><span class="p">((</span><span class="n">amount</span> <span class="o">+</span> <span class="n">final_amount</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">final_amount</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">amount</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">interest</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">)</span>
+        <span class="n">years</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">amount</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">interest</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">years</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">years</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usage: </span><span class="si">{</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> amount interest [years]&quot;</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Savings after </span><span class="si">{</span><span class="n">years</span><span class="si">}</span><span class="s2"> years: </span><span class="si">{</span><span class="n">final</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting savings.py
 </pre></div>
 </div>
 </div>
@@ -8552,8 +9736,8 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[script a884958] Include command-line arguments
- 1 file changed, 22 insertions(+), 2 deletions(-)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[script 65a3b2d] Include command-line arguments
+ 1 file changed, 19 insertions(+), 1 deletion(-)
 </pre></div>
 </div>
 </div>
@@ -8565,10 +9749,10 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
-<span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">65a3b2d (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">ea52645 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8592,10 +9776,10 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
-<span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">65a3b2d (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">ea52645 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8603,13 +9787,44 @@ Switched to branch &#39;master&#39;
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># new changes related to years of depositing</span>
-<span class="o">!</span>git<span class="w"> </span>diff
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> savings.py
+<span class="c1"># Calculate retirement savings</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop_deposit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">final_amount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">stop_deposit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">stop_deposit</span> <span class="o">=</span> <span class="n">years</span>
+        
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">years</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">year</span> <span class="o">&lt;</span> <span class="n">stop_deposit</span><span class="p">:</span>
+            <span class="n">final_amount</span> <span class="o">=</span> <span class="p">(</span><span class="n">amount</span> <span class="o">+</span> <span class="n">final_amount</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">final_amount</span> <span class="o">=</span> <span class="n">final_amount</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">final_amount</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting savings.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>diff
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">diff --git a/savings.py b/savings.py</span>
-<span class=" -Color -Color-Bold">index 87b811b..c0b0879 100644</span>
+<span class=" -Color -Color-Bold">index 46443a6..d1611da 100644</span>
 <span class=" -Color -Color-Bold">--- a/savings.py</span>
 <span class=" -Color -Color-Bold">+++ b/savings.py</span>
 <span class=" -Color -Color-Cyan">@@ -1,7 +1,13 @@</span>
@@ -8620,7 +9835,7 @@ Switched to branch &#39;master&#39;
      final_amount = 0
 <span class=" -Color -Color-Green">+    if stop_deposit is None:</span>
 <span class=" -Color -Color-Green">+        stop_deposit = years</span>
-<span class=" -Color -Color-Green">+</span><span class=" -Color -Color-BGRed">        </span>
+<span class=" -Color -Color-Green">+</span>
      for year in range(years):
 <span class=" -Color -Color-Red">-        final_amount = (amount + final_amount)*(1 + interest)</span>
 <span class=" -Color -Color-Green">+        if year &lt; stop_deposit:</span>
@@ -8628,26 +9843,6 @@ Switched to branch &#39;master&#39;
 <span class=" -Color -Color-Green">+        else:</span>
 <span class=" -Color -Color-Green">+            final_amount = final_amount*(1 + interest)</span>
      return final_amount
-\ No newline at end of file
-<span class=" -Color -Color-Bold">diff --git a/test_savings.py b/test_savings.py</span>
-<span class=" -Color -Color-Bold">index be1c540..6d9e554 100644</span>
-<span class=" -Color -Color-Bold">--- a/test_savings.py</span>
-<span class=" -Color -Color-Bold">+++ b/test_savings.py</span>
-<span class=" -Color -Color-Cyan">@@ -14,4 +14,13 @@</span> def test_two_years():
-     expected_after_2 = (500 + expected_after_1)*1.05
-     expected_final = expected_after_2
-     calculated_final = savings.savings_calculator(initial_amount, annual_interest, years=2)
-<span class=" -Color -Color-Green">+    assert calculated_final == expected_final</span>
-<span class=" -Color -Color-Green">+</span>
-<span class=" -Color -Color-Green">+def test_two_years_only_inital_deposit():</span>
-<span class=" -Color -Color-Green">+    initial_amount = 500</span>
-<span class=" -Color -Color-Green">+    annual_interest = .05</span>
-<span class=" -Color -Color-Green">+    expected_after_1 = 500*1.05</span>
-<span class=" -Color -Color-Green">+    expected_after_2 = expected_after_1*1.05</span>
-<span class=" -Color -Color-Green">+    expected_final = expected_after_2</span>
-<span class=" -Color -Color-Green">+    calculated_final = savings.savings_calculator(initial_amount, annual_interest, years=2, stop_deposit=1)</span>
-     assert calculated_final == expected_final
-\ No newline at end of file
 </pre></div>
 </div>
 </div>
@@ -8666,8 +9861,8 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[varying-deposits 25bbab9] Changes for optional deposit years
- 2 files changed, 17 insertions(+), 2 deletions(-)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[varying-deposits 335928a] Changes for optional deposit years
+ 1 file changed, 8 insertions(+), 2 deletions(-)
 </pre></div>
 </div>
 </div>
@@ -8679,11 +9874,11 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">25bbab9 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
-<span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
-<span class=" -Color -Color-Yellow">542ba6f (</span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">335928a (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">65a3b2d (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">ea52645 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">)</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8708,10 +9903,10 @@ Switched to branch &#39;master&#39;
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Updating 542ba6f..a884958
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Updating ea52645..65a3b2d
 Fast-forward
- savings.py | 24 <span class=" -Color -Color-Green">++++++++++++++++++++++</span><span class=" -Color -Color-Red">--</span>
- 1 file changed, 22 insertions(+), 2 deletions(-)
+ savings.py | 20 <span class=" -Color -Color-Green">+++++++++++++++++++</span><span class=" -Color -Color-Red">-</span>
+ 1 file changed, 19 insertions(+), 1 deletion(-)
 </pre></div>
 </div>
 </div>
@@ -8723,11 +9918,11 @@ Fast-forward
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">25bbab9 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
-<span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
-<span class=" -Color -Color-Yellow">542ba6f</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">335928a (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">65a3b2d (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">ea52645</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8758,12 +9953,11 @@ You have unmerged paths.
   (fix conflicts and run &quot;git commit&quot;)
   (use &quot;git merge --abort&quot; to abort the merge)
 
-Changes to be committed:
-	<span class=" -Color -Color-Green">modified:   test_savings.py</span>
-
 Unmerged paths:
   (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
 	<span class=" -Color -Color-Red">both modified:   savings.py</span>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
 </pre></div>
 </div>
 </div>
@@ -8812,7 +10006,7 @@ if __name__ == &quot;__main__&quot;:
 <p>fix merge</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># %load savings.py</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> savings.py
 <span class="c1"># Calculate retirement savings</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 
@@ -8849,6 +10043,11 @@ if __name__ == &quot;__main__&quot;:
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting savings.py
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -8858,12 +10057,65 @@ if __name__ == &quot;__main__&quot;:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>On branch master
-All conflicts fixed but you are still merging.
-  (use &quot;git commit&quot; to conclude merge)
+You have unmerged paths.
+  (fix conflicts and run &quot;git commit&quot;)
+  (use &quot;git merge --abort&quot; to abort the merge)
 
-Changes to be committed:
-	<span class=" -Color -Color-Green">modified:   savings.py</span>
-	<span class=" -Color -Color-Green">modified:   test_savings.py</span>
+Unmerged paths:
+  (use &quot;git add &lt;file&gt;...&quot; to mark resolution)
+	<span class=" -Color -Color-Red">both modified:   savings.py</span>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%file</span> savings.py
+<span class="c1"># Calculate retirement savings</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">years</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">stop_deposit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">final_amount</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">stop_deposit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">stop_deposit</span> <span class="o">=</span> <span class="n">years</span>
+        
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">years</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">year</span> <span class="o">&lt;</span> <span class="n">stop_deposit</span><span class="p">:</span>
+            <span class="n">final_amount</span> <span class="o">=</span> <span class="p">(</span><span class="n">amount</span> <span class="o">+</span> <span class="n">final_amount</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">final_amount</span> <span class="o">=</span> <span class="n">final_amount</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">interest</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">final_amount</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">amount</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">interest</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">)</span>
+        <span class="n">years</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">amount</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">interest</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">years</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">final</span> <span class="o">=</span> <span class="n">savings_calculator</span><span class="p">(</span><span class="n">amount</span><span class="p">,</span> <span class="n">interest</span><span class="p">,</span> <span class="n">years</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Usage: </span><span class="si">{</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> amount interest [years]&quot;</span><span class="p">)</span>
+        <span class="n">exit</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Savings after </span><span class="si">{</span><span class="n">years</span><span class="si">}</span><span class="s2"> years: </span><span class="si">{</span><span class="n">final</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Overwriting savings.py
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>add<span class="w"> </span>-u
 </pre></div>
 </div>
 </div>
@@ -8875,7 +10127,7 @@ Changes to be committed:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master 5ee6af4] fix conflicts
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[master a71a30b] fix conflicts
 </pre></div>
 </div>
 </div>
@@ -8935,10 +10187,15 @@ kth-github	git@gits-15.sys.kth.se:BB1000/git_demo.git (push)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The authenticity of host &#39;gits-15.sys.kth.se (130.237.48.33)&#39; can&#39;t be established.
-ECDSA key fingerprint is SHA256:OmuyB64vnycQufBPs7zDXyHYpCi89jTrHru802Q+4/E.
-This key is not known by any other names.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? ^C
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (20/20), 2.50 KiB | 2.50 MiB/s, done.
+Total 20 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+To gits-15.sys.kth.se:BB1000/git_demo.git
+ + 56b59e6...a71a30b master -&gt; master (forced update)
 </pre></div>
 </div>
 </div>
@@ -8961,12 +10218,12 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? ^C
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">5ee6af4 (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Red">kth-github/master</span><span class=" -Color -Color-Yellow">)</span> fix conflicts
-<span class=" -Color -Color-Yellow">25bbab9 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
-<span class=" -Color -Color-Yellow">a884958 (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
-<span class=" -Color -Color-Yellow">542ba6f</span> Annual deposits with for loop
-<span class=" -Color -Color-Yellow">9eb01ff</span> Allow for several years of savings
-<span class=" -Color -Color-Yellow">700da30</span> Initial commit
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">a71a30b (</span><span class=" -Color -Color-Bold -Color-Bold-Cyan">HEAD</span><span class=" -Color -Color-Yellow"> -&gt; </span><span class=" -Color -Color-Bold -Color-Bold-Green">master</span><span class=" -Color -Color-Yellow">, </span><span class=" -Color -Color-Bold -Color-Bold-Red">kth-github/master</span><span class=" -Color -Color-Yellow">)</span> fix conflicts
+<span class=" -Color -Color-Yellow">335928a (</span><span class=" -Color -Color-Bold -Color-Bold-Green">varying-deposits</span><span class=" -Color -Color-Yellow">)</span> Changes for optional deposit years
+<span class=" -Color -Color-Yellow">65a3b2d (</span><span class=" -Color -Color-Bold -Color-Bold-Green">script</span><span class=" -Color -Color-Yellow">)</span> Include command-line arguments
+<span class=" -Color -Color-Yellow">ea52645</span> Annual deposits with for loop
+<span class=" -Color -Color-Yellow">0075416</span> Allow for several years of savings
+<span class=" -Color -Color-Yellow">a324f3f</span> Initial commit
 </pre></div>
 </div>
 </div>
@@ -8974,11 +10231,6 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? ^C
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /tmp
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp
 </pre></div>
 </div>
 </div>
@@ -10655,6 +11907,10 @@ Continuing..
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reproducing-gapminder-presentation-by-hans-rosling">Reproducing gapminder presentation by Hans Rosling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update">Update</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-numeric-columns">make numeric columns</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a><ul class="visible nav section-nav flex-column">

@@ -32,7 +32,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 ------------------
 
 
-  [36mCell[39m[36m [39m[32mIn[26][39m[32m, line 1[39m
+  [36mCell[39m[36m [39m[32mIn[27][39m[32m, line 1[39m
 [31m    [39m[31m'It's time to go'[39m
                     ^
 [31mSyntaxError[39m[31m:[39m unterminated string literal (detected at line 1)
